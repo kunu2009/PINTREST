@@ -8,8 +8,17 @@
         "category": "Education",
         "date": "2024-01-15"
     },
-    {
+     {
         "id": 2,
+        "title": "Teacher's Day diy gifts",
+        "description": "10 beautiful easy diy gift ideas to celebrate the amazing educators in our lives",
+        "url": "10 Easy DIY Teacher Appreciation Gifts Under $10.html",
+        "icon": "📚",
+        "category": "Education",
+        "date": "2024-01-15"
+    },
+    {
+        "id": 3,
         "title": "Diwali Decorations & Ideas",
         "description": "Light up your home with these stunning Diwali decoration ideas and DIY projects",
         "url": "diwali.html",
@@ -18,7 +27,7 @@
         "date": "2024-01-10"
     },
     {
-        "id": 3,
+        "id": 4,
         "title": "New Year Resolutions & Goals",
         "description": "Start your year right with these inspiring resolution ideas and goal-setting templates",
         "url": "newyear.html",
@@ -27,7 +36,7 @@
         "date": "2024-01-01"
     },
     {
-        "id": 4,
+        "id": 5,
         "title": "Valentine's Day DIY Gifts",
         "description": "Heartfelt handmade gift ideas to show your love this Valentine's Day",
         "url": "valentines.html",
@@ -36,7 +45,7 @@
         "date": "2024-01-20"
     },
     {
-        "id": 5,
+        "id": 6,
         "title": "Christmas Craft Ideas",
         "description": "Festive DIY decorations and craft projects for a magical Christmas",
         "url": "christmas.html",

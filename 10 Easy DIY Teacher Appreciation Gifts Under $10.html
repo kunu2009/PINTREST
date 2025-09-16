@@ -1,0 +1,1525 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Tutorial: 10 DIY Teacher Appreciation Gifts Under $10</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #e74c3c;
+            --secondary: #3498db;
+            --success: #27ae60;
+            --warning: #f39c12;
+            --dark: #2c3e50;
+            --light: #ecf0f1;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #ffeaa7 0%, #dfe6e9 100%);
+            line-height: 1.6;
+            color: var(--dark);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 0;
+            background: var(--white);
+            border-radius: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: var(--primary);
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .header-subtitle {
+            color: #7f8c8d;
+            font-size: 1.2rem;
+        }
+
+        .navigation {
+            background: var(--white);
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 20px;
+            z-index: 100;
+        }
+
+        .nav-title {
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+
+        .tutorial-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+        }
+
+        .nav-link {
+            padding: 10px;
+            background: var(--light);
+            border-radius: 8px;
+            text-decoration: none;
+            color: var(--dark);
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+            border: 2px solid transparent;
+        }
+
+        .nav-link:hover {
+            background: var(--primary);
+            color: var(--white);
+            transform: translateX(5px);
+        }
+
+        .nav-link.active {
+            background: var(--primary);
+            color: var(--white);
+            border-color: var(--primary);
+        }
+
+        .tutorial-section {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            scroll-margin-top: 120px;
+        }
+
+        .tutorial-header {
+            border-bottom: 3px solid var(--primary);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        .tutorial-number {
+            display: inline-block;
+            background: var(--primary);
+            color: var(--white);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-right: 15px;
+        }
+
+        .tutorial-title {
+            display: inline-block;
+            font-size: 1.8rem;
+            color: var(--dark);
+            vertical-align: middle;
+        }
+
+        .tutorial-meta {
+            display: flex;
+            gap: 30px;
+            margin-top: 15px;
+            flex-wrap: wrap;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 15px;
+            background: var(--light);
+            border-radius: 20px;
+        }
+
+        .meta-icon {
+            font-size: 1.2rem;
+        }
+
+        .difficulty-easy { background: #d4edda; color: #155724; }
+        .difficulty-medium { background: #fff3cd; color: #856404; }
+        .difficulty-hard { background: #f8d7da; color: #721c24; }
+
+        .overview-box {
+            background: linear-gradient(135deg, #f5f3ff 0%, #e0f2fe 100%);
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+        }
+
+        .overview-title {
+            font-size: 1.2rem;
+            color: var(--dark);
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .supplies-section {
+            margin-bottom: 30px;
+        }
+
+        .section-heading {
+            font-size: 1.3rem;
+            color: var(--dark);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .supplies-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+
+        .supply-item {
+            background: var(--light);
+            padding: 15px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .supply-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .supply-name {
+            font-weight: 500;
+        }
+
+        .supply-cost {
+            background: var(--warning);
+            color: var(--white);
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-weight: bold;
+        }
+
+        .step-by-step {
+            margin-bottom: 30px;
+        }
+
+        .step {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 25px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border-left: 4px solid var(--secondary);
+            transition: all 0.3s ease;
+        }
+
+        .step:hover {
+            background: #e3f2fd;
+            transform: translateX(5px);
+        }
+
+        .step-number-circle {
+            flex-shrink: 0;
+            width: 35px;
+            height: 35px;
+            background: var(--secondary);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        .step-content {
+            flex: 1;
+        }
+
+        .step-title {
+            font-weight: bold;
+            color: var(--dark);
+            margin-bottom: 8px;
+        }
+
+        .step-description {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .step-tip {
+            background: #fff9c4;
+            padding: 10px;
+            border-radius: 8px;
+            margin-top: 10px;
+            font-size: 0.9rem;
+            color: #6b5b00;
+        }
+
+        .image-placeholder {
+            background: linear-gradient(45deg, #e0e0e0 25%, #f5f5f5 25%, #f5f5f5 50%, #e0e0e0 50%, #e0e0e0 75%, #f5f5f5 75%, #f5f5f5);
+            background-size: 20px 20px;
+            height: 200px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 0.9rem;
+            margin: 15px 0;
+        }
+
+        .tips-tricks {
+            background: #e8f5e9;
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+        }
+
+        .tips-tricks h3 {
+            color: var(--success);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .tip-list {
+            list-style: none;
+        }
+
+        .tip-list li {
+            padding: 10px 0;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .tip-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--success);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .variations-section {
+            background: #f3e5f5;
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+        }
+
+        .variations-section h3 {
+            color: #7b1fa2;
+            margin-bottom: 15px;
+        }
+
+        .variation-item {
+            background: var(--white);
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .variation-title {
+            font-weight: bold;
+            color: var(--dark);
+            margin-bottom: 5px;
+        }
+
+        .common-mistakes {
+            background: #ffebee;
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+        }
+
+        .common-mistakes h3 {
+            color: #c62828;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .mistake-item {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 15px;
+            align-items: flex-start;
+        }
+
+        .mistake-icon {
+            color: #c62828;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .final-notes {
+            background: linear-gradient(135deg, var(--primary), var(--warning));
+            color: var(--white);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .final-notes h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .scroll-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--primary);
+            color: var(--white);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .scroll-top:hover {
+            transform: scale(1.1);
+            background: var(--secondary);
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 1.8rem; }
+            .tutorial-title { font-size: 1.3rem; }
+            .tutorial-section { padding: 20px; }
+            .navigation { position: relative; top: 0; }
+            .tutorial-links { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎨 Complete DIY Tutorial Guide</h1>
+            <p class="header-subtitle">10 Teacher Appreciation Gifts Under $10 - Step-by-Step Instructions</p>
+        </header>
+
+        <nav class="navigation">
+            <div class="nav-title">📚 Quick Jump to Tutorials:</div>
+            <div class="tutorial-links">
+                <a href="#tutorial1" class="nav-link">1. Survival Kit</a>
+                <a href="#tutorial2" class="nav-link">2. Succulent Pot</a>
+                <a href="#tutorial3" class="nav-link">3. Cookie Mix Jar</a>
+                <a href="#tutorial4" class="nav-link">4. Canvas Tote</a>
+                <a href="#tutorial5" class="nav-link">5. Apple Organizer</a>
+                <a href="#tutorial6" class="nav-link">6. Sanitizer Holders</a>
+                <a href="#tutorial7" class="nav-link">7. Bookmark Set</a>
+                <a href="#tutorial8" class="nav-link">8. Bath Salts</a>
+                <a href="#tutorial9" class="nav-link">9. Supply Kit</a>
+                <a href="#tutorial10" class="nav-link">10. Coffee Sleeve</a>
+            </div>
+        </nav>
+
+        <!-- Tutorial 1: Teacher Survival Kit -->
+        <section id="tutorial1" class="tutorial-section">
+            <div class="tutorial-header">
+                <span class="tutorial-number">1</span>
+                <h2 class="tutorial-title">Teacher Survival Kit in a Mason Jar</h2>
+                <div class="tutorial-meta">
+                    <span class="meta-item difficulty-easy">
+                        <span class="meta-icon">⭐</span> Easy
+                    </span>
+                    <span class="meta-item">
+                        <span class="meta-icon">💰</span> $8.00
+                    </span>
+                    <span class="meta-item">
+                        <span class="meta-icon">⏱️</span> 20 minutes
+                    </span>
+                    <span class="meta-item">
+                        <span class="meta-icon">👥</span> Kid-Friendly
+                    </span>
+                </div>
+            </div>
+
+            <div class="overview-box">
+                <div class="overview-title">Project Overview</div>
+                <p>Create a thoughtful emergency kit filled with treats and essentials that every teacher needs. This personalized mason jar gift is both practical and heartfelt, showing teachers you understand their daily challenges.</p>
+            </div>
+
+            <div class="supplies-section">
+                <h3 class="section-heading">🛒 What You'll Need</h3>
+                <div class="supplies-grid">
+                    <div class="supply-item">
+                        <span class="supply-name">Mason jar (quart size)</span>
+                        <span class="supply-cost">$2.00</span>
+                    </div>
+                    <div class="supply-item">
+                        <span class="supply-name">Assorted chocolates</span>
+                        <span class="supply-cost">$3.00</span>
+                    </div>
+                    <div class="supply-item">
+                        <span class="supply-name">Tea bags/coffee packets</span>
+                        <span class="supply-cost">$2.00</span>
+                    </div>
+                    <div class="supply-item">
+                        <span class="supply-name">Ribbon & decorative tag</span>
+                        <span class="supply-cost">$1.00</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step-by-step">
+                <h3 class="section-heading">📋 Step-by-Step Instructions</h3>
+                
+                <div class="step">
+                    <div class="step-number-circle">1</div>
+                    <div class="step-content">
+                        <div class="step-title">Prepare Your Jar</div>
+                        <div class="step-description">
+                            Start by thoroughly washing your mason jar with warm soapy water. Remove any labels or sticky residue using oil or goo-gone. Dry completely with a clean towel - any moisture can cause items to stick or deteriorate.
+                        </div>
+                        <div class="step-tip">💡 Pro Tip: Run the jar through the dishwasher for extra sanitization!</div>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number-circle">2</div>
+                    <div class="step-content">
+                        <div class="step-title">Plan Your Layers</div>
+                        <div class="step-description">
+                            Before filling, arrange your items by size and color. Place larger items (like wrapped candies) at the bottom, medium items (tea bags) in the middle, and smaller items (mints) on top. This creates visual appeal and prevents crushing.
+                        </div>
+                        <div class="image-placeholder">Visual guide for layering items</div>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number-circle">3</div>
+                    <div class="step-content">
+                        <div class="step-title">Fill the Jar Strategically</div>
+                        <div class="step-description">
+                            Begin with wrapped chocolates or candies at the bottom. Add a layer of individually wrapped tea bags or coffee packets. Include practical items like hand sanitizer packets, lip balm, or pain relievers. Fill gaps with smaller candies or mints. Leave about 1/2 inch space at the top.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number-circle">4</div>
+                    <div class="step-content">
+                        <div class="step-title">Create Your Label</div>
+                        <div class="step-description">
+                            Design a creative label using cardstock or printable tags. Write "Teacher's Survival Kit" or "Emergency Stash for [Teacher's Name]". You can add funny subtitles like "For those 'Is it Friday yet?' moments" or "Break in case of emergency (or Monday)".
+                        </div>
+                        <div class="step-tip">💡 Use a hole punch and thread ribbon through for a professional look</div>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number-circle">5</div>
+                    <div class="step-content">
+                        <div class="step-title">Add Finishing Touches</div>
+                        <div class="step-description">
+                            Secure the lid tightly. Cut a circle of fabric (2 inches larger than lid) and place over the lid, securing with a rubber band. Tie ribbon around the band to hide it. Attach your tag with additional ribbon or twine. Consider adding a small charm or bell for extra decoration.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tips-tricks">
+                <h3>💡 Tips & Tricks for Success</h3>
+                <ul class="tip-list">
+                    <li>Use seasonal items: peppermints for winter, lemonade packets for summer</li>
+                    <li>Include a mix of sweet and practical items for balance</li>
+                    <li>Add a personal note listing what each item is "for" (chocolate for tough days, tea for relaxation)</li>
+                    <li>Consider dietary restrictions - include sugar-free or allergy-friendly options</li>
+                    <li>Use a wide-mouth jar for easier filling and access</li>
+                </ul>
+            </div>
+
+            <div class="variations-section">
+                <h3>🎨 Creative Variations</h3>
+                <div class="variation-item">
+                    <div class="variation-title">Theme-Based Kits</div>
+                    <p>Create specialized kits: "Coffee Lover's Survival Kit" with coffee samples, "Zen Teacher Kit" with calming teas and stress balls, or "Sweet Tooth Kit" with premium chocolates.</p>
+                </div>
+                <div class="variation-item">
+                    <div class="variation-title">Subject-Specific Themes</div>
+                    <p>Math teachers: calculator-shaped cookies. English teachers: bookmark and literary tea. Science teachers: test tube candies.</p>
+                </div>
+            </div>
+
+            <div class="common-mistakes">
+                <h3>⚠️ Common Mistakes to Avoid</h3>
+                <div class="mistake-item">
+                    <span class="mistake-icon">❌</span>
+                    <div>
+                        <strong>Overpacking:</strong> Don't stuff too tightly - items should be visible and easily removable.
+                    </div>
+                </div>
+                <div class="mistake-item">
+                    <span class="mistake-icon">❌</span>
+                    <div>
+                        <strong>Forgetting expiration dates:</strong> Check all food items and choose ones with longer shelf life.
+                    </div>
+                </div>
+                <div class="mistake-item">
+                    <span class="mistake-icon">❌</span>
+                    <div>
+                        <strong>Poor layering:</strong> Heavy items on top can crush delicate items below.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tutorial 2: Succulent Pot -->
+        <section id="tutorial2" class="tutorial-section">
+            <div class="tutorial-header">
+                <span class="tutorial-number">2</span>
+                <h2 class="tutorial-title">Decorated Succulent Pot</h2>
+                <div class="tutorial-meta">
+                    <span class="meta-item difficulty-easy">
+                        <span class="meta-icon">⭐</span> Easy
+                    </span>
+                    <span class="meta-item">
+                        <span class="meta-icon">💰</span> $7.50
+                    </span>
+                    <span class="meta-item">
+                        <span class="meta-icon">⏱️</span> 25 minutes
+                    </span>
+                    <span class="meta-item">
+                        <span class="meta-icon">🌱</span> Living Gift
+                    </span>
+                </div>
+            </div>
+
+            <div class="overview-box">
+                <div class="overview-title">Project Overview</div>
+                <p>Give the gift of green! Create a personalized succulent planter that brightens any classroom while requiring minimal care - perfect for busy teachers.</p>
+            </div>
+
+            <div class="supplies-section">
+                <h3 class="section-heading">🛒 What You'll Need</h3>
+                <div class="supplies-grid">
+                    <div class="supply-item">
+                        <span class="supply-name">Small succulent plant</span>
+                        <span class="supply-cost">$3.00</span>
+                    </div>
+                    <div class="supply-item">
+                        <span class="supply-name">4-inch terra cotta pot</span>
+                        <span class="supply-cost">$2.00</span>
+                    </div>
+                    <div class="supply-item">
+                        <span class="supply-name">Acrylic paints (3 colors)</span>
+                        <span class="supply-cost">$1.50</span>
+                    </div>
+                    <div class="supply-item">
+                        <span class="supply-name">Cactus potting soil</span>
+                        <span class="supply-cost">$1.00</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step-by-step">
+                <h3 class="section-heading">📋 Step-by-Step Instructions</h3>
+                
+                <div class="step">
+                    <div class="step-number-circle">1</div>
+                    <div class="step-content">
+                        <div class="step-title">Prep Your Pot</div>
+                        <div class="step-description">
+                            Clean the terra cotta pot with a damp cloth to remove dust. If the pot is very dry, soak it in water for 10 minutes, then let it dry completely. This prevents the pot from absorbing paint unevenly.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number-circle">2</div>
+                    <div class="step-content">
+                        <div class="step-title">Design & Paint Base Coat</div>
+                        <div class="step-description">
+                            Apply a base coat of acrylic paint. White or pastel colors work best for adding designs later. Use a foam brush for smooth coverage. Apply 2-3 thin coats rather than one thick coat, allowing 15 minutes drying time between coats.
+                        </div>
+                        <div class="step-tip">💡 Place pot upside down on a cup while painting for easier handling</div>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number-circle">3</div>
+                    <div class="step-content">
+                        <div class="step-title">Add Your Design</div>
+                        <div class="step-description">
+                            Once base is dry, add designs: paint apples, pencils, or write inspirational quotes like "Teachers help us grow" or "Thanks for helping me bloom". Use painter's tape for clean lines. Small brushes work best for details.
+                        </div>
+                        <div class="image-placeholder">Design inspiration gallery</div>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number-circle">4</div>
+                    <div class="step-content">
+                        <div class="step-title">Seal the Paint</div>
+                        <div class="step-description">
+                            Once completely dry (wait at least 2 hours), apply a clear acrylic sealer spray in a well-ventilated area. This protects your design from water damage. Hold spray 12 inches away and use light, even coats.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number-circle">5</div>
+                    <div class="step-content">
+                        <div class="step-title">Plant Your Succulent</div>
+                        <div class="step-description">
+                            Add a small layer of pebbles for drainage (optional but recommended). Fill pot 1/3 with cactus soil. Gently remove succulent from nursery pot, loosen roots slightly. Place in center and fill around with soil, leaving 1/2 inch from rim. Press soil gently to secure.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number-circle">6</div>
+                    <div class="step-content">
+                        <div class="step-title">Create Care Card</div>
+                        <div class="step-description">
+                            Make a small care instruction card: "Water sparingly every 2 weeks. Loves bright, indirect light. I'm low maintenance, just like you wished your students were! 😊" Attach with a decorative stake or tie to pot.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tips-tricks">
+                <h3>💡 Tips & Tricks for Success</h3>
+                <ul class="tip-list">
+                    <li>Choose hardy succulents like jade, aloe, or echeveria for beginners</li>
+                    <li>Use chalk to sketch design before painting</li>
+                    <li>Metallic markers work great for adding names or fine details</li>
+                    <li>Add decorative stones or moss on top of soil for finished look</li>
+                    <li>Consider the classroom's light conditions when selecting plants</li>
+                </ul>
+            </div>
+
+            <div class="common-mistakes">
+                <h3>⚠️ Common Mistakes to Avoid</h3>
+                <div class="mistake-item">
+                    <span class="mistake-icon">❌</span>
+                    <div>
+                        <strong>Using regular potting soil:</strong> Succulents need well-draining cactus mix to prevent root rot.
+                    </div>
+                </div>
+                <div class="mistake-item">
+                    <span class="mistake-icon">❌</span>
+                    <div>
+                        <strong>Painting wet pot:</strong> Always ensure pot is completely dry before painting.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tutorial 3: Cookie Mix Jar -->
+        <section id="tutorial3" class="tutorial-section">
+            <div class="tutorial-header">
+                <span class="tutorial-number">3</span>
+                <h2 class="tutorial-title">Cookie Mix in a Jar</h2>
+                <div class="tutorial-meta">
+                    <span class="meta-item difficulty-easy">
+                        <span class="meta-icon">⭐</span> Easy
+                    </span>
+                    <span class="meta-item">
+                        <span class="meta-icon">💰</span> $6.00
+                    </span>
+                    <span class="meta-item">
+                        <span class="meta-icon">⏱️</span> 15 minutes
+                    </span>
+                    <span class="meta-item">
+                        <span class="meta-icon">🍪</span> Edible Gift
+                    </span>
+                </div>
+            </div>
+
+            <div class="overview-box">
+                <div class="overview-title">Project Overview</div>
+                <p>Layer dry cookie ingredients in a mason jar for a beautiful and delicious gift. Teachers can bake fresh cookies whenever they want a homemade treat!</p>
+            </div>
+
+            <div class="supplies-section">
+                <h3 class="section-heading">🛒 What You'll Need</h3>
+                <div class="supplies-grid">
+                    <div class="supply-item">
+                        <span class="supply-name">Quart mason jar</span>
+                        <span class="supply-cost">$2.50</span>
+                    </div>
+                    <div class="supply-item">
+                        <span class="supply-name">Cookie ingredients mix</span>
+                        <span class="supply-cost">$3.00</span>
+                    </div>
+                    <div class="supply-item">
+                        <span class="supply-name">Recipe card & ribbon</span>
+                        <span class="supply-cost">$0.50</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step-by-step">
+                <h3 class="section-heading">📋 Step-by-Step Instructions</h3>
+                
+                <div class="step">
+                    <div class="step-number-circle">1</div>
+                    <div class="step-content">
+                        <div class="step-title">Prepare Ingredients</div>
+                        <div class="step-description">
+                            Measure all dry ingredients precisely. For chocolate chip cookies: 1¾ cups all-purpose flour, ¾ teaspoon baking soda, ¾ teaspoon salt, ¾ cup brown sugar (packed), ½ cup white sugar, 1 cup chocolate chips. Having exact measurements ensures perfect cookies.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number-circle">2</div>
+                    <div class="step-content">
+                        <div class="step-title">Layer Strategically</div>
+                        <div class="step-description">
+                            Layer in this order for best visual effect: flour mixed with baking soda and salt (bottom), brown sugar (pack firmly), white sugar, chocolate chips (top). Use a funnel or paper cone for neat layers. Tap jar gently between layers to level.
+                        </div>
+                        <div class="step-tip">💡 Use the back of a spoon to press and level each layer</div>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number-circle">3</div>
+                    <div class="step-content">
+                        <div class="step-title">Create Recipe Card</div>
+                        <div class="step-description">
+                            Write or print recipe on cardstock: "Add: 1 stick softened butter, 1 egg, 1 tsp vanilla. Mix wet ingredients, add jar contents. Drop on cookie sheet. Bake 375°F for 9-11 minutes. Makes 2 dozen cookies." Include your name and date.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number-circle">4</div>
+                    <div class="step-content">
+                        <div class="step-title">Decorate Jar</div>
+                        <div class="step-description">
+                            Cut fabric circle 2 inches larger than lid. Place over lid, secure with rubber band or jar ring. Tie ribbon to hide band. Punch hole in recipe card and attach with ribbon. Add label: "You're one smart cookie!" or "Thanks for making learning sweet!"
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="variations-section">
+                <h3>🎨 Recipe Variations</h3>
+                <div class="variation-item">
+                    <div class="variation-title">Brownie Mix</div>
+                    <p>Layer cocoa powder, flour, sugars, and chocolate chips for decadent brownies.</p>
+                </div>
+                <div class="variation-item">
+                    <div class="variation-title">Oatmeal Cranberry</div>
+                    <p>Include oats, dried cranberries, and white chocolate chips for a healthier option.</p>
+                </div>
+                <div class="variation-item">
+                    <div class="variation-title">Sugar-Free Option</div>
+                    <p>Use sugar substitutes and sugar-free chocolate chips for diabetic-friendly treats.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tutorial 4: Canvas Tote -->
+        <section id="tutorial4" class="tutorial-section">
+            <div class="tutorial-header">
+                <span class="tutorial-number">4</span>
+                <h2 class="tutorial-title">Hand-Decorated Canvas Tote Bag</h2>
+                <div class="tutorial-meta">
+                    <span class="meta-item difficulty-medium">
+                        <span class="meta-icon">⭐⭐</span> Medium
+                    </span>
+                    <span class="meta-item">
+                        <span class="meta-icon">💰</span> $9.00
+                    </span>
+                    <span class="meta-item">
+                        <span class="meta-icon">⏱️</span> 45 minutes
+                    </span>
+                    <span class="meta-item">
+                        <span class="meta-icon">👜</span> Practical
+                    </span>
+                </div>
+            </div>
+
+            <div class="overview-box">
+                <div class="overview-title">Project Overview</div>
+                <p>Create a personalized tote bag perfect for carrying books, supplies, or lunch. This practical gift becomes a daily reminder of your appreciation.</p>
+            </div>
+
+            <div class="supplies-section">
+                <h3 class="section-heading">🛒 What You'll Need</h3>
+                <div class="supplies-grid">
+                    <div class="supply-item">
+                        <span class="supply-name">Plain canvas tote bag</span>
+                        <span class="supply-cost">$4.00</span>
+                    </div>
+                    <div class="supply-item">
+                        <span class="supply-name">Fabric paints (various)</span>
+                        <span class="supply-cost">$3.00</span>
+                    </div>
+                    <div class="supply-item">
+                        <span class="supply-name">Stamps or stencils</span>
+                        <span class="supply-cost">$2.00</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step-by-step">
+                <h3 class="section-heading">📋 Step-by-Step Instructions</h3>
+                
+                <div class="step">
+                    <div class="step-number-circle">1</div>
+                    <div class="step-content">
+                        <div class="step-title">Prepare Your Workspace</div>
+                        <div class="step-description">
+                            Iron the tote bag to remove wrinkles - this ensures smooth paint application. Insert cardboard or plastic sheet inside bag to prevent paint bleeding through. Cover work surface with newspaper or plastic. Have paper towels ready for cleanup.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number-circle">2</div>
+                    <div class="step-content">
+                        <div class="step-title">Plan Your Design</div>
+                        <div class="step-description">
+                            Sketch your design lightly with pencil or chalk. Popular ideas: teacher's name with decorative border, subject-related images (books, math symbols, music notes), inspirational quotes, or student handprints with names. Keep design 2 inches from edges.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number-circle">3</div>
+                    <div class="step-content">
+                        <div class="step-title">Apply Base Design</div>
+                        <div class="step-description">
+                            If using stamps: apply fabric paint evenly to stamp, press firmly without sliding. For stencils: secure with tape, dab paint with sponge brush using up-down motion (not brushing). Freehand: use brushes appropriate to detail size. Work from light to dark colors.
+                        </div>
+                        <div class="step-tip">💡 Practice on paper first to get comfortable with your technique</div>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number-circle">4</div>
+                    <div class="step-content">
+                        <div class="step-title">Add Details & Personalization</div>
+                        <div class="step-description">
+                            Once base design is dry (30-60 minutes), add details with fine brushes or fabric markers. Consider adding: teacher's initials, school year, small decorative elements, or student signatures around the main design. Use metallic paints for special accents.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number-circle">5</div>
+                    <div class="step-content">
+                        <div class="step-title">Heat-Set the Design</div>
+                        <div class="step-description">
+                            After paint is completely dry (wait 24 hours for best results), heat-set to make washable. Place clean cloth over design, iron on medium-high heat for 3-5 minutes, moving iron constantly. Alternative: put in dryer on high for 30 minutes.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tips-tricks">
+                <h3>💡 Professional Tips</h3>
+                <ul class="tip-list">
+                    <li>Use fabric medium mixed with acrylic paint for softer, more flexible finish</li>
+                    <li>Create clean lines with painter's tape</li>
+                    <li>Layer colors from light to dark for best coverage</li>
+                    <li>Add glitter while paint is wet for sparkle effect</li>
+                    <li>Include care instructions: "Machine wash cold, inside out"</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Tutorial 5: Apple Organizer -->
+        <section id="tutorial5" class="tutorial-section">
+            <div class="tutorial-header">
+                <span class="tutorial-number">5</span>
+                <h2 class="tutorial-title">Apple-Shaped Desk Organizer</h2>
+                <div class="tutorial-meta">
+                    <span class="meta-item difficulty-easy">
+                        <span class="meta-icon">⭐</span> Easy
+                    </span>
+                    <span class="meta-item">
+                        <span class="meta-icon">💰</span> $5.00
+                    </span>
+                    <span class="meta-item">
+                        <span class="meta-icon">⏱️</span> 30 minutes
+                    </span>
+                    <span class="meta-item">
+                        <span class="meta-icon">🍎</span> Classic Theme
+                    </span>
+                </div>
+            </div>
+
+            <div class="overview-box">
+                <div class="overview-title">Project Overview</div>
+                <p>Transform a simple tin can into an adorable apple-themed pencil holder. This classic teacher gift is both decorative and functional for any desk.</p>
+            </div>
+
+            <div class="supplies-section">
+                <h3 class="section-heading">🛒 What You'll Need</h3>
+                <div class="supplies-grid">
+                    <div class="supply-item">
+                        <span class="supply-name">Clean tin can</span>
+                        <span class="supply-cost">FREE</span>
+                    </div>
+                    <div class="supply-item">
+                        <span class="supply-name">Red & green felt/paper</span>
+                        <span class="supply-cost">$2.00</span>
+                    </div>
+                    <div class="supply-item">
+                        <span class="supply-name">Craft glue & scissors</span>
+                        <span class="supply-cost">$1.00</span>
+                    </div>
+                    <div class="supply-item">
+                        <span class="supply-name">Pencils/supplies to fill</span>
+                        <span class="supply-cost">$2.00</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step-by-step">
+                <h3 class="section-heading">📋 Step-by-Step Instructions</h3>
+                
+                <div class="step">
+                    <div class="step-number-circle">1</div>
+                    <div class="step-content">
+                        <div class="step-title">Prepare the Can</div>
+                        <div class="step-description">
+                            Remove label completely using warm soapy water and scrubbing pad. For stubborn adhesive, use oil or adhesive remover. File down any sharp edges on the rim with sandpaper or nail file. Wash thoroughly and dry completely.
+                        </div>
+                        <div class="step-tip">💡 Choose a can size based on intended use - soup cans for pencils, larger for supplies</div>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number-circle">2</div>
+                    <div class="step-content">
+                        <div class="step-title">Create Apple Body</div>
+                        <div class="step-description">
+                            Measure can height and circumference. Cut red felt/paper to these dimensions plus 1/2 inch overlap. Apply craft glue to can in sections, wrapping felt smoothly. Overlap at back seam. For apple shape authenticity, cut a slight inward curve at top edge.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number-circle">3</div>
+                    <div class="step-content">
+                        <div class="step-title">Add Apple Details</div>
+                        <div class="step-description">
+                            Cut 2-3 leaf shapes from green felt (about 2 inches long). Cut small brown rectangle for stem (1 inch tall). Glue stem to inside back edge of can. Attach leaves around stem, allowing them to peek over edge. Optional: add small white highlight circle for shine effect.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number-circle">4</div>
+                    <div class="step-content">
+                        <div class="step-title">Personalize & Fill</div>
+                        <div class="step-description">
+                            Add teacher's name with alphabet stickers or paint pen. Create a tag saying "You're the apple of our eye!" or "Thanks for helping me grow!" Fill with new pencils, pens, markers, or other desk supplies. Arrange items attractively with tallest in back.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="variations-section">
+                <h3>🎨 Creative Variations</h3>
+                <div class="variation-item">
+                    <div class="variation-title">Other Fruit Themes</div>
+                    <p>Create orange (for zest for learning), pineapple (for sweet teacher), or watermelon designs.</p>
+                </div>
+                <div class="variation-item">
+                    <div class="variation-title">Chalkboard Apple</div>
+                    <p>Use chalkboard paint for a writable surface where messages can be changed.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tutorial 6: Hand Sanitizer Holders -->
+        <section id="tutorial6" class="tutorial-section">
+            <div class="tutorial-header">
+                <span class="tutorial-number">6</span>
+                <h2 class="tutorial-title">Custom Hand Sanitizer Holders</h2>
+                <div class="tutorial-meta">
+                    <span class="meta-item difficulty-easy">
+                        <span class="meta-icon">⭐</span> Easy
+                    </span>
+                    <span class="meta-item">
+                        <span class="meta-icon">💰</span> $4.50
+                    </span>
+                    <span class="meta-item">
+                        <span class="meta-icon">⏱️</span> 20 minutes
+                    </span>
+                    <span class="meta-item">
+                        <span class="meta-icon">🧴</span> Practical
+                    </span>
+                </div>
+            </div>
+
+            <div class="overview-box">
+                <div class="overview-title">Project Overview</div>
+                <p>Create cute, portable hand sanitizer holders that clip onto bags, lanyards, or belts. Perfect for teachers constantly on the move!</p>
+            </div>
+
+            <div class="step-by-step">
+                <h3 class="section-heading">📋 Step-by-Step Instructions</h3>
+                
+                <div class="step">
+                    <div class="step-number-circle">1</div>
+                    <div class="step-content">
+                        <div class="step-title">Cut Fabric Pieces</div>
+                        <div class="step-description">
+                            For each holder, cut fabric rectangles 4x3 inches. Choose fun patterns: school themes, favorite colors, or seasonal designs. If using felt, no hemming needed. For cotton fabric, add 1/4 inch seam allowance.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number-circle">2</div>
+                    <div class="step-content">
+                        <div class="step-title">Create the Pocket</div>
+                        <div class="step-description">
+                            Fold fabric in half (2x3 inches). Sew or hot glue sides, leaving top open. If sewing, use 1/4 inch seam. Turn right side out if sewn. Test fit with sanitizer bottle - adjust size if needed. Reinforce corners with extra glue or stitching.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number-circle">3</div>
+                    <div class="step-content">
+                        <div class="step-title">Add Clip Mechanism</div>
+                        <div class="step-description">
+                            Cut 6-inch elastic cord or ribbon. Fold in half to create loop. Attach to back of holder at top center using strong glue or stitches. Add lobster clasp or carabiner clip to loop end. Alternative: sew elastic loop directly for sliding onto belts.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number-circle">4</div>
+                    <div class="step-content">
+                        <div class="step-title">Decorate & Personalize</div>
+                        <div class="step-description">
+                            Add decorations: iron-on initials, fabric paint designs, buttons, or small charms. Use fabric markers to write teacher's name or fun messages like "Stay Clean!" or "Germ Fighter". Add small beads to elastic for extra flair.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tutorial 7: Bookmark Bouquet -->
+        <section id="tutorial7" class="tutorial-section">
+            <div class="tutorial-header">
+                <span class="tutorial-number">7</span>
+                <h2 class="tutorial-title">Bookmark Bouquet</h2>
+                <div class="tutorial-meta">
+                    <span class="meta-item difficulty-easy">
+                        <span class="meta-icon">⭐</span> Easy
+                    </span>
+                    <span class="meta-item">
+                        <span class="meta-icon">💰</span> $3.50
+                    </span>
+                    <span class="meta-item">
+                        <span class="meta-icon">⏱️</span> 25 minutes
+                    </span>
+                    <span class="meta-item">
+                        <span class="meta-icon">📚</span> Literary Gift
+                    </span>
+                </div>
+            </div>
+
+            <div class="overview-box">
+                <div class="overview-title">Project Overview</div>
+                <p>Create a beautiful set of laminated bookmarks featuring inspirational quotes, arranged like a bouquet - perfect for book-loving teachers!</p>
+            </div>
+
+            <div class="step-by-step">
+                <h3 class="section-heading">📋 Step-by-Step Instructions</h3>
+                
+                <div class="step">
+                    <div class="step-number-circle">1</div>
+                    <div class="step-content">
+                        <div class="step-title">Design Your Bookmarks</div>
+                        <div class="step-description">
+                            Create 5-7 bookmarks (2x6 inches each) using cardstock or computer design. Include inspirational teaching quotes, colorful borders, and decorative elements. Mix designs: some with quotes, some with patterns, one with "Best Teacher" message.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number-circle">2</div>
+                    <div class="step-content">
+                        <div class="step-title">Print & Cut</div>
+                        <div class="step-description">
+                            Print on cardstock for durability. Cut carefully with paper cutter or scissors for straight edges. Round corners with corner punch for professional look. Leave space at top for hole punch (about 1/2 inch).
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number-circle">3</div>
+                    <div class="step-content">
+                        <div class="step-title">Laminate for Durability</div>
+                        <div class="step-description">
+                            Use self-adhesive laminating sheets or laminating machine. Leave 1/8 inch border around bookmark. Smooth out air bubbles with credit card edge. Trim excess laminate, maintaining small sealed border to prevent peeling.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number-circle">4</div>
+                    <div class="step-content">
+                        <div class="step-title">Add Finishing Touches</div>
+                        <div class="step-description">
+                            Punch hole at top center of each bookmark. Thread colorful ribbons or tassels through holes (6-8 inches long). Mix ribbon colors and textures. Tie different decorative knots for variety.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number-circle">5</div>
+                    <div class="step-content">
+                        <div class="step-title">Arrange as Bouquet</div>
+                        <div class="step-description">
+                            Fan bookmarks out like flower bouquet. Secure at base with ribbon tied in bow. Wrap in tissue paper or cellophane like flowers. Add gift tag: "Thanks for helping our minds bloom!" Present standing in small vase or jar.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tutorial 8: Bath Salts -->
+        <section id="tutorial8" class="tutorial-section">
+            <div class="tutorial-header">
+                <span class="tutorial-number">8</span>
+                <h2 class="tutorial-title">Relaxing Bath Salts</h2>
+                <div class="tutorial-meta">
+                    <span class="meta-item difficulty-easy">
+                        <span class="meta-icon">⭐</span> Easy
+                    </span>
+                    <span class="meta-item">
+                        <span class="meta-icon">💰</span> $6.50
+                    </span>
+                    <span class="meta-item">
+                        <span class="meta-icon">⏱️</span> 15 minutes
+                    </span>
+                    <span class="meta-item">
+                        <span class="meta-icon">🛁</span> Self-Care
+                    </span>
+                </div>
+            </div>
+
+            <div class="overview-box">
+                <div class="overview-title">Project Overview</div>
+                <p>Create luxurious bath salts for teacher relaxation. This thoughtful gift encourages self-care after long school days.</p>
+            </div>
+
+            <div class="step-by-step">
+                <h3 class="section-heading">📋 Step-by-Step Instructions</h3>
+                
+                <div class="step">
+                    <div class="step-number-circle">1</div>
+                    <div class="step-content">
+                        <div class="step-title">Mix Base Ingredients</div>
+                        <div class="step-description">
+                            In large bowl, combine 2 cups Epsom salt with 1/2 cup sea salt or Himalayan pink salt. Mix thoroughly. The combination provides muscle relaxation (Epsom) and mineral benefits (sea salt).
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number-circle">2</div>
+                    <div class="step-content">
+                        <div class="step-title">Add Essential Oils</div>
+                        <div class="step-description">
+                            Add 15-20 drops essential oil. Popular blends: Lavender (relaxation), Eucalyptus-Mint (energizing), Orange-Vanilla (uplifting). Mix oils in small bowl first, then drizzle over salts while stirring to distribute evenly.
+                        </div>
+                        <div class="step-tip">💡 Less is more - you can always add more scent, but can't take it away!</div>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number-circle">3</div>
+                    <div class="step-content">
+                        <div class="step-title">Add Color (Optional)</div>
+                        <div class="step-description">
+                            For colored salts, add 2-3 drops food coloring or soap colorant. Mix thoroughly until color is even. Pastel colors work best: lavender for relaxation, blue for calm, pink for happiness. Natural option: dried lavender buds or rose petals.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number-circle">4</div>
+                    <div class="step-content">
+                        <div class="step-title">Package Beautifully</div>
+                        <div class="step-description">
+                            Divide into 2 small mason jars or glass containers (4-6 oz each). Fill jars 3/4 full to leave room for scooping. Tap gently to settle salts. Clean jar rim and threads for proper sealing.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number-circle">5</div>
+                    <div class="step-content">
+                        <div class="step-title">Create Labels & Instructions</div>
+                        <div class="step-description">
+                            Design labels: "Teacher's Timeout", "Relaxation in a Jar", or "You Deserve This!" Include usage instructions: "Add 1/4 cup to warm bath. Soak and relax for 20 minutes." Add ingredients list for those with sensitivities. Tie with ribbon and attach wooden scoop if desired.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tips-tricks">
+                <h3>💡 Scent Combination Guide</h3>
+                <ul class="tip-list">
+                    <li>Stress Relief: Lavender + Chamomile + Bergamot</li>
+                    <li>Energy Boost: Peppermint + Rosemary + Lemon</li>
+                    <li>Muscle Relief: Eucalyptus + Wintergreen + Lavender</li>
+                    <li>Mood Lifting: Orange + Ylang Ylang + Grapefruit</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Tutorial 9: Supply Kit -->
+        <section id="tutorial9" class="tutorial-section">
+            <div class="tutorial-header">
+                <span class="tutorial-number">9</span>
+                <h2 class="tutorial-title">Classroom Supply Emergency Kit</h2>
+                <div class="tutorial-meta">
+                    <span class="meta-item difficulty-easy">
+                        <span class="meta-icon">⭐</span> Easy
+                    </span>
+                    <span class="meta-item">
+                        <span class="meta-icon">💰</span> $9.50
+                    </span>
+                    <span class="meta-item">
+                        <span class="meta-icon">⏱️</span> 20 minutes
+                    </span>
+                    <span class="meta-item">
+                        <span class="meta-icon">📎</span> Ultra-Practical
+                    </span>
+                </div>
+            </div>
+
+            <div class="overview-box">
+                <div class="overview-title">Project Overview</div>
+                <p>Assemble a decorated supply kit filled with classroom essentials that always seem to disappear. Every teacher needs this backup stash!</p>
+            </div>
+
+            <div class="step-by-step">
+                <h3 class="section-heading">📋 Step-by-Step Instructions</h3>
+                
+                <div class="step">
+                    <div class="step-number-circle">1</div>
+                    <div class="step-content">
+                        <div class="step-title">Choose & Decorate Container</div>
+                        <div class="step-description">
+                            Select pencil box, small tackle box, or decorative tin. Clean thoroughly. Decorate outside with vinyl stickers, washi tape patterns, or paint. Add teacher's name prominently. Consider clear box to easily see contents.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number-circle">2</div>
+                    <div class="step-content">
+                        <div class="step-title">Gather Essential Supplies</div>
+                        <div class="step-description">
+                            Include: mini stapler with extra staples, tape dispenser, paper clips (various sizes), rubber bands, binder clips, sticky notes (multiple colors), good pens (2-3), dry erase markers, push pins, small scissors. Buy in bulk and divide for multiple gifts.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number-circle">3</div>
+                    <div class="step-content">
+                        <div class="step-title">Organize Strategically</div>
+                        <div class="step-description">
+                            Use small containers or dividers within box. Group similar items. Place frequently used items (pens, sticky notes) on top. Secure loose items in small bags. Include small envelope for "emergency chocolate" with note.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number-circle">4</div>
+                    <div class="step-content">
+                        <div class="step-title">Create Inventory Card</div>
+                        <div class="step-description">
+                            List all included items on cardstock. Laminate and attach inside lid. Add checklist boxes for restocking. Include funny note: "For when students 'borrowed' all your supplies... again" or "Because sharing is caring, but sometimes you need your own!"
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tutorial 10: Coffee Sleeve -->
+        <section id="tutorial10" class="tutorial-section">
+            <div class="tutorial-header">
+                <span class="tutorial-number">10</span>
+                <h2 class="tutorial-title">Personalized Coffee Sleeve</h2>
+                <div class="tutorial-meta">
+                    <span class="meta-item difficulty-medium">
+                        <span class="meta-icon">⭐⭐</span> Medium
+                    </span>
+                    <span class="meta-item">
+                        <span class="meta-icon">💰</span> $5.50
+                    </span>
+                    <span class="meta-item">
+                        <span class="meta-icon">⏱️</span> 35 minutes
+                    </span>
+                    <span class="meta-item">
+                        <span class="meta-icon">☕</span> Coffee Lover
+                    </span>
+                </div>
+            </div>
+
+            <div class="overview-box">
+                <div class="overview-title">Project Overview</div>
+                <p>Create a reusable, personalized coffee sleeve perfect for the teacher who runs on caffeine. Pair with coffee treats for the complete gift!</p>
+            </div>
+
+            <div class="step-by-step">
+                <h3 class="section-heading">📋 Step-by-Step Instructions</h3>
+                
+                <div class="step">
+                    <div class="step-number-circle">1</div>
+                    <div class="step-content">
+                        <div class="step-title">Create Pattern & Cut</div>
+                        <div class="step-description">
+                            Use existing coffee sleeve as template or cut felt to 9x3 inches. For tapered fit, make one long edge 8.5 inches. Cut two pieces if you want double thickness. Choose colors that won't show coffee stains easily.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number-circle">2</div>
+                    <div class="step-content">
+                        <div class="step-title">Add Personalization</div>
+                        <div class="step-description">
+                            Before assembling, add teacher's initial or name. Options: fabric paint, iron-on letters, embroidery, or felt letters glued on. Position 1/3 from one end so it shows when wrapped. Add small designs like coffee beans, hearts, or apples.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number-circle">3</div>
+                    <div class="step-content">
+                        <div class="step-title">Sew or Glue Assembly</div>
+                        <div class="step-description">
+                            Overlap short edges by 1/2 inch to form cylinder. For sewing: use blanket stitch or running stitch with contrasting thread. For gluing: use fabric glue, hold with clips until dry. Ensure overlap is secure as this takes stress during use.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number-circle">4</div>
+                    <div class="step-content">
+                        <div class="step-title">Add Closure System</div>
+                        <div class="step-description">
+                            Sew button on one end of overlap. Create elastic loop on opposite end that hooks over button. Alternative: use velcro strips for adjustable fit. This allows sleeve to lay flat for storage and adjust to different cup sizes.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number-circle">5</div>
+                    <div class="step-content">
+                        <div class="step-title">Package with Coffee Treats</div>
+                        <div class="step-description">
+                            Place sleeve in clear bag with coffee-related items: instant coffee packets, coffee shop gift card, chocolate-covered espresso beans, or biscotti. Add tag: "Thanks a latte!" or "You're brew-tiful!" Include care instructions for sleeve.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="final-notes">
+            <h3>🎉 You're Ready to Create!</h3>
+            <p>These 10 tutorials provide everything you need to make thoughtful, budget-friendly teacher gifts. Remember, the effort and love you put into handmade gifts means more than anything store-bought!</p>
+        </div>
+    </div>
+
+    <div class="scroll-top" onclick="scrollToTop()">↑</div>
+
+    <script>
+        // Smooth scroll to sections
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                
+                // Update active link
+                document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+                this.classList.add('active');
+                
+                // Smooth scroll
+                targetSection.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        // Scroll to top function
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Show/hide scroll button
+        window.addEventListener('scroll', function() {
+            const scrollBtn = document.querySelector('.scroll-top');
+            if (window.pageYOffset > 300) {
+                scrollBtn.style.display = 'flex';
+            } else {
+                scrollBtn.style.display = 'none';
+            }
+        });
+
+        // Track active section while scrolling
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('.tutorial-section');
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').substring(1) === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+    

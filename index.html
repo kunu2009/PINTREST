@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Pins Website - Creative Ideas & Inspiration</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 30px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            animation: fadeInDown 0.8s ease;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            opacity: 0.95;
+            animation: fadeInUp 0.8s ease;
+        }
+
+        .posts-section {
+            padding: 40px 30px;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            color: #555;
+            margin-bottom: 30px;
+            text-align: center;
+            position: relative;
+            animation: fadeIn 1s ease;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin: 15px auto;
+            border-radius: 2px;
+        }
+
+        .posts-grid {
+            display: grid;
+            gap: 20px;
+            animation: fadeInUp 1s ease;
+        }
+
+        .post-card {
+            display: block;
+            text-decoration: none;
+            background: white;
+            border: 2px solid #f0f0f0;
+            border-radius: 15px;
+            padding: 25px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .post-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(102, 126, 234, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .post-card:hover::before {
+            left: 100%;
+        }
+
+        .post-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
+            border-color: #667eea;
+        }
+
+        .post-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .post-icon {
+            font-size: 2rem;
+            margin-right: 15px;
+        }
+
+        .post-title {
+            font-size: 1.3rem;
+            color: #333;
+            font-weight: 600;
+        }
+
+        .post-description {
+            color: #666;
+            font-size: 1rem;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+
+        .post-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.9rem;
+            color: #999;
+        }
+
+        .post-date {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .post-category {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 40px;
+            font-size: 1.2rem;
+            color: #666;
+        }
+
+        .loading-spinner {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #667eea;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+        }
+
+        .error-message {
+            background: #fee;
+            color: #c33;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin: 20px;
+        }
+
+        .no-posts {
+            text-align: center;
+            padding: 60px 20px;
+            color: #999;
+        }
+
+        .no-posts-icon {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            opacity: 0.5;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #999;
+            font-size: 0.9rem;
+            border-top: 1px solid #f0f0f0;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .container {
+                border-radius: 0;
+            }
+
+            header {
+                padding: 40px 20px;
+            }
+
+            .posts-section {
+                padding: 30px 20px;
+            }
+
+            .post-title {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Welcome to My Pins Website</h1>
+            <p class="subtitle">Discover creative ideas and inspiration for every occasion</p>
+        </header>
+
+        <main class="posts-section">
+            <h2 class="section-title">Featured Pins</h2>
+            <div id="postsContainer" class="posts-grid">
+                <div class="loading">
+                    <div class="loading-spinner"></div>
+                    <p>Loading amazing content...</p>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>© 2024 My Pins Website | Made with ❤️ for creative minds</p>
+        </footer>
+    </div>
+
+    <script>
+        // Sample posts.json structure (you'll need to create this file)
+        const samplePosts = [
+            {
+                "id": 1,
+                "title": "Teacher's Day Inspiration",
+                "description": "30 beautiful quotes and ideas to celebrate the amazing educators in our lives",
+                "url": "teachers-day.html",
+                "icon": "📚",
+                "category": "Education",
+                "date": "2024-01-15"
+            },
+            {
+                "id": 2,
+                "title": "Diwali Decorations & Ideas",
+                "description": "Light up your home with these stunning Diwali decoration ideas and DIY projects",
+                "url": "diwali.html",
+                "icon": "🪔",
+                "category": "Festivals",
+                "date": "2024-01-10"
+            },
+            {
+                "id": 3,
+                "title": "New Year Resolutions & Goals",
+                "description": "Start your year right with these inspiring resolution ideas and goal-setting templates",
+                "url": "newyear.html",
+                "icon": "🎊",
+                "category": "Lifestyle",
+                "date": "2024-01-01"
+            }
+        ];
+
+        // Function to format date
+        function formatDate(dateString) {
+            const options = { year: 'numeric', month: 'short', day: 'numeric' };
+            return new Date(dateString).toLocaleDateString(undefined, options);
+        }
+
+        // Function to create post card HTML
+        function createPostCard(post) {
+            return `
+                <a href="${post.url}" class="post-card">
+                    <div class="post-header">
+                        <span class="post-icon">${post.icon || '📌'}</span>
+                        <h3 class="post-title">${post.title}</h3>
+                    </div>
+                    <p class="post-description">${post.description}</p>
+                    <div class="post-meta">
+                        <span class="post-date">
+                            📅 ${formatDate(post.date)}
+                        </span>
+                        <span class="post-category">${post.category}</span>
+                    </div>
+                </a>
+            `;
+        }
+
+        // Function to display posts
+        function displayPosts(posts) {
+            const container = document.getElementById('postsContainer');
+            
+            if (posts.length === 0) {
+                container.innerHTML = `
+                    <div class="no-posts">
+                        <div class="no-posts-icon">📭</div>
+                        <h3>No posts available yet</h3>
+                        <p>Check back soon for amazing content!</p>
+                    </div>
+                `;
+                return;
+            }
+
+            const postsHTML = posts.map(post => createPostCard(post)).join('');
+            container.innerHTML = postsHTML;
+        }
+
+        // Function to display error
+        function displayError(message) {
+            const container = document.getElementById('postsContainer');
+            container.innerHTML = `
+                <div class="error-message">
+                    <p>⚠️ ${message}</p>
+                    <p style="margin-top: 10px; font-size: 0.9rem;">Using sample data instead...</p>
+                </div>
+            `;
+            
+            // Display sample posts after showing error
+            setTimeout(() => {
+                displayPosts(samplePosts);
+            }, 2000);
+        }
+
+        // Function to load posts
+        async function loadPosts() {
+            try {
+                const response = await fetch('posts.json');
+                
+                if (!response.ok) {
+                    throw new Error('Could not load posts.json');
+                }
+                
+                const posts = await response.json();
+                displayPosts(posts);
+                
+            } catch (error) {
+                console.error('Error loading posts:', error);
+                displayError('Could not load posts from posts.json');
+            }
+        }
+
+        // Load posts when page loads
+        document.addEventListener('DOMContentLoaded', loadPosts);
+    </script>
+</body>
+</html>

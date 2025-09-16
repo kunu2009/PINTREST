@@ -1,0 +1,47 @@
+[
+    {
+        "id": 1,
+        "title": "Teacher's Day Inspiration",
+        "description": "30 beautiful quotes and ideas to celebrate the amazing educators in our lives",
+        "url": "teachersdayquote.html",
+        "icon": "📚",
+        "category": "Education",
+        "date": "2024-01-15"
+    },
+    {
+        "id": 2,
+        "title": "Diwali Decorations & Ideas",
+        "description": "Light up your home with these stunning Diwali decoration ideas and DIY projects",
+        "url": "diwali.html",
+        "icon": "🪔",
+        "category": "Festivals",
+        "date": "2024-01-10"
+    },
+    {
+        "id": 3,
+        "title": "New Year Resolutions & Goals",
+        "description": "Start your year right with these inspiring resolution ideas and goal-setting templates",
+        "url": "newyear.html",
+        "icon": "🎊",
+        "category": "Lifestyle",
+        "date": "2024-01-01"
+    },
+    {
+        "id": 4,
+        "title": "Valentine's Day DIY Gifts",
+        "description": "Heartfelt handmade gift ideas to show your love this Valentine's Day",
+        "url": "valentines.html",
+        "icon": "💝",
+        "category": "Romance",
+        "date": "2024-01-20"
+    },
+    {
+        "id": 5,
+        "title": "Christmas Craft Ideas",
+        "description": "Festive DIY decorations and craft projects for a magical Christmas",
+        "url": "christmas.html",
+        "icon": "🎄",
+        "category": "Holidays",
+        "date": "2023-12-20"
+    }
+]

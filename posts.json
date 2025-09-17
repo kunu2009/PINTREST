@@ -53,4 +53,14 @@
         "category": "Holidays",
         "date": "2023-12-20"
     }
+    ,
+    {
+        "id": 7,
+        "title": "15 Morning Routine Habits",
+        "description": "Build a powerful morning routine with 15 science-backed habits for energy, focus, and productivity.",
+        "url": "15habtits.html",
+        "icon": "🌅",
+        "category": "Lifestyle",
+        "date": "2025-09-17"
+    }
 ]

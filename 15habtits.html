@@ -1,0 +1,1529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>15 Morning Routine Habits for a Successful Day</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #FF6B6B;
+            --secondary: #4ECDC4;
+            --accent: #45B7D1;
+            --success: #95E77E;
+            --warning: #FFD93D;
+            --dark: #2C3E50;
+            --light: #F7F9FC;
+            --white: #FFFFFF;
+            --gradient1: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --gradient2: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            --gradient3: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            --morning: linear-gradient(135deg, #FFE5B4 0%, #FFCC99 50%, #FFB380 100%);
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: var(--morning);
+            min-height: 100vh;
+            line-height: 1.6;
+            color: var(--dark);
+            overflow-x: hidden;
+        }
+
+        /* Header Styles */
+        .hero-section {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.9) 100%);
+            padding: 60px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .hero-section::before {
+            content: "☀️";
+            position: absolute;
+            font-size: 200px;
+            opacity: 0.1;
+            top: -50px;
+            right: -50px;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(10deg); }
+        }
+
+        h1 {
+            font-size: 3rem;
+            background: var(--gradient1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 15px;
+            animation: slideInDown 0.8s ease;
+        }
+
+        .subtitle {
+            font-size: 1.3rem;
+            color: var(--dark);
+            opacity: 0.8;
+            margin-bottom: 30px;
+            animation: slideInUp 0.8s ease;
+        }
+
+        /* Timer Display */
+        .time-display {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: var(--white);
+            padding: 15px 25px;
+            border-radius: 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            z-index: 1000;
+            font-weight: bold;
+            color: var(--accent);
+            animation: slideInRight 0.5s ease;
+        }
+
+        .current-time {
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Stats Section */
+        .stats-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin: 30px 0;
+            animation: fadeIn 1s ease;
+        }
+
+        .stat-card {
+            background: var(--white);
+            padding: 20px 30px;
+            border-radius: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            background: var(--gradient2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .stat-label {
+            color: var(--dark);
+            opacity: 0.7;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Category Filter */
+        .filter-container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .filter-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+
+        .filter-btn {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 25px;
+            background: var(--white);
+            color: var(--dark);
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            font-size: 1rem;
+        }
+
+        .filter-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+        }
+
+        .filter-btn.active {
+            background: var(--gradient1);
+            color: var(--white);
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Habits Grid */
+        .habits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .habit-card {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            animation: fadeInUp 0.5s ease;
+            cursor: pointer;
+        }
+
+        .habit-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--gradient1);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .habit-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .habit-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .habit-card.completed {
+            background: linear-gradient(135deg, #f0fff4 0%, #e6ffed 100%);
+            border: 2px solid var(--success);
+        }
+
+        .habit-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .habit-icon {
+            font-size: 2.5rem;
+            line-height: 1;
+        }
+
+        .habit-number {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            background: var(--gradient1);
+            color: var(--white);
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .habit-title {
+            font-size: 1.4rem;
+            color: var(--dark);
+            margin-bottom: 5px;
+            flex: 1;
+        }
+
+        .habit-category {
+            display: inline-block;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .category-physical {
+            background: #FFE5B4;
+            color: #D2691E;
+        }
+
+        .category-mental {
+            background: #E6E6FA;
+            color: #6B46C1;
+        }
+
+        .category-spiritual {
+            background: #E0F2FE;
+            color: #0369A1;
+        }
+
+        .category-productivity {
+            background: #FEE2E2;
+            color: #DC2626;
+        }
+
+        .category-health {
+            background: #D4EDDA;
+            color: #155724;
+        }
+
+        .habit-time {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            color: var(--dark);
+            opacity: 0.7;
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+        }
+
+        .habit-description {
+            color: var(--dark);
+            opacity: 0.8;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .habit-benefits {
+            background: #F8F9FA;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .benefit-title {
+            font-weight: bold;
+            color: var(--dark);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .benefit-list {
+            list-style: none;
+        }
+
+        .benefit-list li {
+            padding: 5px 0;
+            padding-left: 25px;
+            position: relative;
+            color: var(--dark);
+            opacity: 0.8;
+        }
+
+        .benefit-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--success);
+            font-weight: bold;
+        }
+
+        .habit-tips {
+            background: #FFF9E6;
+            padding: 15px;
+            border-radius: 10px;
+            border-left: 4px solid var(--warning);
+            margin-bottom: 20px;
+        }
+
+        .tip-content {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .tip-icon {
+            font-size: 1.2rem;
+        }
+
+        .habit-actions {
+            display: flex;
+            gap: 10px;
+            padding-top: 20px;
+            border-top: 1px solid #E5E7EB;
+        }
+
+        .action-btn {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            border-radius: 10px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+        }
+
+        .btn-complete {
+            background: var(--gradient3);
+            color: var(--white);
+        }
+
+        .btn-complete:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .btn-complete.completed {
+            background: var(--success);
+        }
+
+        .btn-info {
+            background: #F3F4F6;
+            color: var(--dark);
+        }
+
+        .btn-info:hover {
+            background: #E5E7EB;
+        }
+
+        /* Routine Builder */
+        .routine-builder {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 40px;
+            margin: 50px 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .builder-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .builder-title {
+            font-size: 2rem;
+            color: var(--dark);
+            margin-bottom: 10px;
+        }
+
+        .builder-subtitle {
+            color: var(--dark);
+            opacity: 0.7;
+        }
+
+        .selected-habits {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            min-height: 60px;
+            padding: 20px;
+            background: #F8F9FA;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            align-items: center;
+        }
+
+        .selected-habit-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 15px;
+            background: var(--gradient1);
+            color: var(--white);
+            border-radius: 20px;
+            font-size: 0.9rem;
+            animation: scaleIn 0.3s ease;
+        }
+
+        .remove-chip {
+            cursor: pointer;
+            font-weight: bold;
+            margin-left: 5px;
+        }
+
+        .total-time {
+            text-align: center;
+            font-size: 1.2rem;
+            color: var(--dark);
+            margin: 20px 0;
+            padding: 15px;
+            background: linear-gradient(135deg, #FFE5B4 0%, #FFCC99 100%);
+            border-radius: 15px;
+        }
+
+        .download-btn {
+            display: block;
+            margin: 30px auto;
+            padding: 15px 40px;
+            background: var(--gradient1);
+            color: var(--white);
+            border: none;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+
+        .download-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+        }
+
+        /* Progress Tracker */
+        .progress-section {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 30px;
+            margin: 30px 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .progress-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .progress-title {
+            font-size: 1.8rem;
+            color: var(--dark);
+            margin-bottom: 10px;
+        }
+
+        .progress-bar-container {
+            background: #E5E7EB;
+            height: 30px;
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: var(--gradient3);
+            border-radius: 15px;
+            transition: width 0.5s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-weight: bold;
+        }
+
+        .streak-display {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .streak-item {
+            text-align: center;
+            padding: 20px;
+            background: #F8F9FA;
+            border-radius: 15px;
+            flex: 1;
+            max-width: 200px;
+        }
+
+        .streak-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            background: var(--gradient2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .streak-label {
+            color: var(--dark);
+            opacity: 0.7;
+            font-size: 0.9rem;
+            margin-top: 5px;
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.7);
+            z-index: 2000;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .modal-content {
+            position: relative;
+            background: var(--white);
+            margin: 50px auto;
+            padding: 40px;
+            width: 90%;
+            max-width: 600px;
+            border-radius: 20px;
+            max-height: 80vh;
+            overflow-y: auto;
+            animation: slideUp 0.3s ease;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 20px;
+            right: 25px;
+            font-size: 2rem;
+            cursor: pointer;
+            color: var(--dark);
+            opacity: 0.5;
+            transition: opacity 0.3s ease;
+        }
+
+        .close-modal:hover {
+            opacity: 1;
+        }
+
+        .modal-title {
+            font-size: 1.8rem;
+            color: var(--dark);
+            margin-bottom: 20px;
+        }
+
+        .implementation-steps {
+            counter-reset: step-counter;
+        }
+
+        .step-item {
+            margin-bottom: 20px;
+            padding-left: 40px;
+            position: relative;
+            counter-increment: step-counter;
+        }
+
+        .step-item::before {
+            content: counter(step-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: var(--gradient1);
+            color: var(--white);
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        /* Motivational Quote */
+        .quote-section {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.8) 100%);
+            border-radius: 20px;
+            padding: 40px;
+            margin: 30px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .quote-text {
+            font-size: 1.5rem;
+            color: var(--dark);
+            font-style: italic;
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+
+        .quote-author {
+            color: var(--dark);
+            opacity: 0.7;
+            font-size: 1.1rem;
+        }
+
+        .new-quote-btn {
+            margin-top: 20px;
+            padding: 10px 25px;
+            background: var(--gradient1);
+            color: var(--white);
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+
+        .new-quote-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes scaleIn {
+            from {
+                transform: scale(0);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .habits-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .time-display {
+                position: static;
+                margin: 20px auto;
+                text-align: center;
+                width: fit-content;
+            }
+
+            .modal-content {
+                margin: 20px;
+                padding: 25px;
+            }
+
+            .stats-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .streak-display {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="time-display">
+        <div class="current-time">
+            <span>🌅</span>
+            <span id="timeDisplay"></span>
+        </div>
+    </div>
+
+    <div class="hero-section">
+        <h1>15 Morning Routine Habits</h1>
+        <p class="subtitle">Transform Your Day Before It Even Begins</p>
+        
+        <div class="stats-container">
+            <div class="stat-card">
+                <div class="stat-number">15</div>
+                <div class="stat-label">Powerful Habits</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">90</div>
+                <div class="stat-label">Minutes Total</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">5</div>
+                <div class="stat-label">Categories</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="filter-container">
+            <div class="filter-buttons">
+                <button class="filter-btn active" onclick="filterHabits('all')">All Habits</button>
+                <button class="filter-btn" onclick="filterHabits('physical')">🏃 Physical</button>
+                <button class="filter-btn" onclick="filterHabits('mental')">🧠 Mental</button>
+                <button class="filter-btn" onclick="filterHabits('spiritual')">🧘 Spiritual</button>
+                <button class="filter-btn" onclick="filterHabits('productivity')">📈 Productivity</button>
+                <button class="filter-btn" onclick="filterHabits('health')">💚 Health</button>
+            </div>
+        </div>
+
+        <div class="habits-grid" id="habitsGrid"></div>
+
+        <div class="progress-section">
+            <div class="progress-header">
+                <h2 class="progress-title">Your Morning Progress</h2>
+                <p style="color: #6B7280; margin-bottom: 20px;">Track your daily habits and build consistency</p>
+            </div>
+            <div class="progress-bar-container">
+                <div class="progress-bar" id="progressBar">0%</div>
+            </div>
+            <div class="streak-display">
+                <div class="streak-item">
+                    <div class="streak-number" id="todayCount">0</div>
+                    <div class="streak-label">Today's Habits</div>
+                </div>
+                <div class="streak-item">
+                    <div class="streak-number" id="weekStreak">7</div>
+                    <div class="streak-label">Day Streak</div>
+                </div>
+                <div class="streak-item">
+                    <div class="streak-number" id="bestStreak">21</div>
+                    <div class="streak-label">Best Streak</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="routine-builder">
+            <div class="builder-header">
+                <h2 class="builder-title">🎯 Build Your Perfect Morning</h2>
+                <p class="builder-subtitle">Click on habits above to add them to your custom routine</p>
+            </div>
+            <div class="selected-habits" id="selectedHabits">
+                <span style="color: #9CA3AF;">No habits selected yet. Click on habits above to add them!</span>
+            </div>
+            <div class="total-time" id="totalTime">
+                Total Time: 0 minutes
+            </div>
+            <button class="download-btn" onclick="downloadRoutine()">
+                📥 Download My Morning Routine
+            </button>
+        </div>
+
+        <div class="quote-section">
+            <div class="quote-text" id="quoteText">"The secret of getting ahead is getting started."</div>
+            <div class="quote-author" id="quoteAuthor">- Mark Twain</div>
+            <button class="new-quote-btn" onclick="getNewQuote()">Get New Quote</button>
+        </div>
+    </div>
+
+    <div id="modal" class="modal" onclick="closeModalOnBackground(event)">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <script>
+        const habits = [
+            {
+                id: 1,
+                title: "Wake Up Early (5-6 AM)",
+                icon: "⏰",
+                category: "productivity",
+                time: 0,
+                description: "Start your day before the world wakes up. Early rising gives you quiet time to focus on yourself without distractions.",
+                benefits: [
+                    "Increased productivity",
+                    "Better mental clarity",
+                    "More time for personal goals",
+                    "Improved sleep quality"
+                ],
+                tips: "Place your alarm across the room to force yourself out of bed. Use a sunrise alarm clock for gentler awakening.",
+                implementation: [
+                    "Go to bed 15 minutes earlier each night",
+                    "Set alarm 10 minutes earlier every 3 days",
+                    "Prepare clothes the night before",
+                    "Have a compelling reason to wake up",
+                    "Track your wake time for accountability"
+                ]
+            },
+            {
+                id: 2,
+                title: "Hydrate Immediately",
+                icon: "💧",
+                category: "health",
+                time: 2,
+                description: "Drink 16-24 oz of water as soon as you wake up to rehydrate your body after hours of sleep.",
+                benefits: [
+                    "Jumpstarts metabolism",
+                    "Flushes out toxins",
+                    "Increases alertness",
+                    "Improves skin health"
+                ],
+                tips: "Add lemon for vitamin C and improved digestion. Keep water by your bedside for convenience.",
+                implementation: [
+                    "Fill water bottle night before",
+                    "Place it on nightstand",
+                    "Drink before getting out of bed",
+                    "Add electrolytes if needed",
+                    "Track daily water intake"
+                ]
+            },
+            {
+                id: 3,
+                title: "Make Your Bed",
+                icon: "🛏️",
+                category: "productivity",
+                time: 3,
+                description: "A simple task that gives you an immediate sense of accomplishment and sets a productive tone for the day.",
+                benefits: [
+                    "Creates sense of accomplishment",
+                    "Reduces stress",
+                    "Improves bedroom aesthetics",
+                    "Builds discipline"
+                ],
+                tips: "Invest in quality bedding that you enjoy arranging. Simplify with fewer pillows if needed.",
+                implementation: [
+                    "Start with just straightening sheets",
+                    "Add pillows arrangement",
+                    "Include duvet/comforter folding",
+                    "Make it a non-negotiable habit",
+                    "Time yourself to make it efficient"
+                ]
+            },
+            {
+                id: 4,
+                title: "Morning Stretching",
+                icon: "🤸",
+                category: "physical",
+                time: 10,
+                description: "Gentle stretching routine to wake up your muscles, improve flexibility, and increase blood flow.",
+                benefits: [
+                    "Improved flexibility",
+                    "Reduced muscle tension",
+                    "Better posture",
+                    "Increased energy levels"
+                ],
+                tips: "Focus on major muscle groups. Hold each stretch for 15-30 seconds. Breathe deeply throughout.",
+                implementation: [
+                    "Start with neck rolls",
+                    "Move to shoulder stretches",
+                    "Include spine twists",
+                    "Add leg stretches",
+                    "End with full body stretch"
+                ]
+            },
+            {
+                id: 5,
+                title: "Meditation Practice",
+                icon: "🧘",
+                category: "spiritual",
+                time: 10,
+                description: "Quiet your mind and set intentions for the day through mindfulness meditation.",
+                benefits: [
+                    "Reduced anxiety",
+                    "Improved focus",
+                    "Emotional regulation",
+                    "Greater self-awareness"
+                ],
+                tips: "Start with just 5 minutes. Use guided apps like Headspace or Calm if you're a beginner.",
+                implementation: [
+                    "Find quiet, comfortable space",
+                    "Set timer for desired duration",
+                    "Focus on breath",
+                    "Acknowledge thoughts without judgment",
+                    "End with gratitude"
+                ]
+            },
+            {
+                id: 6,
+                title: "Journaling Session",
+                icon: "📓",
+                category: "mental",
+                time: 10,
+                description: "Write down thoughts, gratitude, goals, or simply brain dump to clear your mind for the day.",
+                benefits: [
+                    "Mental clarity",
+                    "Emotional processing",
+                    "Goal tracking",
+                    "Improved creativity"
+                ],
+                tips: "Try different formats: gratitude journal, morning pages, or bullet journaling. Keep it simple and consistent.",
+                implementation: [
+                    "Choose journaling style",
+                    "Set specific time limit",
+                    "Write without editing",
+                    "Include 3 gratitudes daily",
+                    "Review weekly for patterns"
+                ]
+            },
+            {
+                id: 7,
+                title: "Exercise or Workout",
+                icon: "💪",
+                category: "physical",
+                time: 20,
+                description: "Get your heart rate up with cardio, strength training, yoga, or any physical activity you enjoy.",
+                benefits: [
+                    "Increased energy",
+                    "Better mood",
+                    "Improved fitness",
+                    "Enhanced mental clarity"
+                ],
+                tips: "Prepare workout clothes the night before. Start with just 10 minutes if 20 feels too long.",
+                implementation: [
+                    "Choose workout type",
+                    "Prepare equipment/clothes",
+                    "Start with warm-up",
+                    "Follow structured routine",
+                    "Cool down and stretch"
+                ]
+            },
+            {
+                id: 8,
+                title: "Cold Shower",
+                icon: "🚿",
+                category: "health",
+                time: 5,
+                description: "End your shower with 30-60 seconds of cold water to boost alertness and strengthen immunity.",
+                benefits: [
+                    "Increased alertness",
+                    "Improved circulation",
+                    "Boosted immunity",
+                    "Enhanced mood"
+                ],
+                tips: "Start with lukewarm and gradually decrease temperature. Focus on deep breathing during cold exposure.",
+                implementation: [
+                    "Start with regular warm shower",
+                    "Gradually reduce temperature",
+                    "End with 30 seconds cold",
+                    "Focus on controlled breathing",
+                    "Increase duration over time"
+                ]
+            },
+            {
+                id: 9,
+                title: "Healthy Breakfast",
+                icon: "🥗",
+                category: "health",
+                time: 15,
+                description: "Fuel your body with a nutritious breakfast rich in protein, healthy fats, and complex carbohydrates.",
+                benefits: [
+                    "Sustained energy",
+                    "Better concentration",
+                    "Improved metabolism",
+                    "Reduced cravings"
+                ],
+                tips: "Prep breakfast ingredients the night before. Focus on whole foods and avoid processed sugars.",
+                implementation: [
+                    "Plan weekly breakfast menu",
+                    "Prep ingredients in advance",
+                    "Include protein source",
+                    "Add fruits or vegetables",
+                    "Eat mindfully without distractions"
+                ]
+            },
+            {
+                id: 10,
+                title: "Read or Learn",
+                icon: "📚",
+                category: "mental",
+                time: 15,
+                description: "Spend time reading books, articles, or learning something new to stimulate your mind.",
+                benefits: [
+                    "Knowledge expansion",
+                    "Improved vocabulary",
+                    "Mental stimulation",
+                    "Reduced stress"
+                ],
+                tips: "Keep a book on your nightstand. Try audiobooks during other morning activities.",
+                implementation: [
+                    "Choose book or learning material",
+                    "Set specific reading goal",
+                    "Take notes on key insights",
+                    "Apply one lesson daily",
+                    "Share learnings with others"
+                ]
+            },
+            {
+                id: 11,
+                title: "Breathing Exercises",
+                icon: "🌬️",
+                category: "spiritual",
+                time: 5,
+                description: "Practice deep breathing techniques like box breathing or 4-7-8 method to center yourself.",
+                benefits: [
+                    "Reduced stress",
+                    "Improved oxygen flow",
+                    "Better focus",
+                    "Lower blood pressure"
+                ],
+                tips: "Try the 4-7-8 technique: inhale for 4, hold for 7, exhale for 8. Do 3-4 cycles.",
+                implementation: [
+                    "Find comfortable position",
+                    "Choose breathing technique",
+                    "Set timer for 5 minutes",
+                    "Focus solely on breath",
+                    "End with moment of stillness"
+                ]
+            },
+            {
+                id: 12,
+                title: "Visualization",
+                icon: "🎯",
+                category: "mental",
+                time: 5,
+                description: "Visualize your goals and imagine yourself successfully completing the day's tasks.",
+                benefits: [
+                    "Increased motivation",
+                    "Better goal clarity",
+                    "Improved confidence",
+                    "Enhanced performance"
+                ],
+                tips: "Be specific in your visualizations. Engage all senses for more powerful mental imagery.",
+                implementation: [
+                    "Close eyes in quiet space",
+                    "Visualize ideal day ahead",
+                    "See yourself achieving goals",
+                    "Feel the emotions of success",
+                    "End with positive affirmation"
+                ]
+            },
+            {
+                id: 13,
+                title: "Affirmations",
+                icon: "💭",
+                category: "spiritual",
+                time: 3,
+                description: "Repeat positive affirmations to build confidence and set a positive mindset for the day.",
+                benefits: [
+                    "Increased self-confidence",
+                    "Positive mindset",
+                    "Reduced negative self-talk",
+                    "Better emotional state"
+                ],
+                tips: "Create personal affirmations that resonate with your goals. Say them with conviction in the mirror.",
+                implementation: [
+                    "Write 5-10 personal affirmations",
+                    "Stand in power pose",
+                    "Repeat each 3 times",
+                    "Feel the words deeply",
+                    "Update affirmations monthly"
+                ]
+            },
+            {
+                id: 14,
+                title: "Plan Your Day",
+                icon: "📅",
+                category: "productivity",
+                time: 5,
+                description: "Review your schedule and set top 3 priorities for the day to ensure focused productivity.",
+                benefits: [
+                    "Clear priorities",
+                    "Reduced decision fatigue",
+                    "Better time management",
+                    "Increased productivity"
+                ],
+                tips: "Use the MIT (Most Important Tasks) method. Identify 3 must-do tasks for the day.",
+                implementation: [
+                    "Review calendar",
+                    "List all tasks",
+                    "Identify top 3 priorities",
+                    "Schedule time blocks",
+                    "Prepare necessary materials"
+                ]
+            },
+            {
+                id: 15,
+                title: "Skincare Routine",
+                icon: "✨",
+                category: "health",
+                time: 5,
+                description: "Take care of your skin with a simple cleanse, moisturize, and SPF routine.",
+                benefits: [
+                    "Healthier skin",
+                    "Increased self-care",
+                    "Protection from UV damage",
+                    "Boosted confidence"
+                ],
+                tips: "Keep it simple: cleanser, moisturizer, SPF. Consistency matters more than complexity.",
+                implementation: [
+                    "Gentle face cleansing",
+                    "Apply toner if needed",
+                    "Moisturize face and neck",
+                    "Apply SPF protection",
+                    "Don't forget hands"
+                ]
+            }
+        ];
+
+        const motivationalQuotes = [
+            { text: "The secret of getting ahead is getting started.", author: "Mark Twain" },
+            { text: "Your morning routine sets the tone for your whole day.", author: "Unknown" },
+            { text: "Win the morning, win the day.", author: "Tim Ferriss" },
+            { text: "Every morning we are born again. What we do today matters most.", author: "Buddha" },
+            { text: "The early morning has gold in its mouth.", author: "Benjamin Franklin" },
+            { text: "Morning is an important time of day, because how you spend your morning can often tell you what kind of day you are going to have.", author: "Lemony Snicket" },
+            { text: "Rise up, start fresh, see the bright opportunity in each day.", author: "Unknown" },
+            { text: "The sun is a daily reminder that we too can rise again from the darkness.", author: "Sara Ajna" },
+            { text: "Today's goals: Coffee and kindness. Maybe two coffees, and then kindness.", author: "Nanea Hoffman" },
+            { text: "Morning comes whether you set the alarm or not.", author: "Ursula K. Le Guin" }
+        ];
+
+        let selectedHabits = [];
+        let completedHabits = [];
+        let currentFilter = 'all';
+
+        function init() {
+            displayHabits(habits);
+            updateTimeDisplay();
+            setInterval(updateTimeDisplay, 1000);
+            loadProgress();
+        }
+
+        function updateTimeDisplay() {
+            const now = new Date();
+            const timeString = now.toLocaleTimeString('en-US', { 
+                hour: '2-digit', 
+                minute: '2-digit',
+                hour12: true 
+            });
+            document.getElementById('timeDisplay').textContent = timeString;
+        }
+
+        function displayHabits(habitsToShow) {
+            const grid = document.getElementById('habitsGrid');
+            grid.innerHTML = '';
+
+            habitsToShow.forEach(habit => {
+                const card = document.createElement('div');
+                card.className = 'habit-card';
+                if (completedHabits.includes(habit.id)) {
+                    card.classList.add('completed');
+                }
+                
+                card.innerHTML = `
+                    <div class="habit-number">${habit.id}</div>
+                    <div class="habit-header">
+                        <div class="habit-icon">${habit.icon}</div>
+                        <div>
+                            <h3 class="habit-title">${habit.title}</h3>
+                            <span class="habit-category category-${habit.category}">
+                                ${habit.category.charAt(0).toUpperCase() + habit.category.slice(1)}
+                            </span>
+                        </div>
+                    </div>
+                    <div class="habit-time">
+                        <span>⏱️ ${habit.time} minutes</span>
+                    </div>
+                    <p class="habit-description">${habit.description}</p>
+                    <div class="habit-benefits">
+                        <div class="benefit-title">
+                            <span>✨</span>
+                            <span>Key Benefits:</span>
+                        </div>
+                        <ul class="benefit-list">
+                            ${habit.benefits.map(benefit => `<li>${benefit}</li>`).join('')}
+                        </ul>
+                    </div>
+                    <div class="habit-tips">
+                        <div class="tip-content">
+                            <span class="tip-icon">💡</span>
+                            <p>${habit.tips}</p>
+                        </div>
+                    </div>
+                    <div class="habit-actions">
+                        <button class="action-btn btn-complete ${completedHabits.includes(habit.id) ? 'completed' : ''}" 
+                                onclick="toggleComplete(${habit.id})">
+                            ${completedHabits.includes(habit.id) ? '✅ Completed' : '⭕ Mark Complete'}
+                        </button>
+                        <button class="action-btn btn-info" onclick="showImplementation(${habit.id})">
+                            📋 How to Start
+                        </button>
+                    </div>
+                `;
+
+                card.addEventListener('click', (e) => {
+                    if (!e.target.classList.contains('action-btn')) {
+                        toggleHabitSelection(habit.id);
+                    }
+                });
+
+                grid.appendChild(card);
+            });
+        }
+
+        function filterHabits(category) {
+            currentFilter = category;
+            
+            // Update active button
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+
+            if (category === 'all') {
+                displayHabits(habits);
+            } else {
+                const filtered = habits.filter(h => h.category === category);
+                displayHabits(filtered);
+            }
+        }
+
+        function toggleComplete(habitId) {
+            const index = completedHabits.indexOf(habitId);
+            if (index > -1) {
+                completedHabits.splice(index, 1);
+            } else {
+                completedHabits.push(habitId);
+                showCelebration();
+            }
+            
+            updateProgress();
+            displayHabits(currentFilter === 'all' ? habits : habits.filter(h => h.category === currentFilter));
+        }
+
+        function updateProgress() {
+            const percentage = Math.round((completedHabits.length / habits.length) * 100);
+            const progressBar = document.getElementById('progressBar');
+            progressBar.style.width = `${percentage}%`;
+            progressBar.textContent = `${percentage}%`;
+            
+            document.getElementById('todayCount').textContent = completedHabits.length;
+            
+            // Save progress
+            localStorage.setItem('completedHabits', JSON.stringify(completedHabits));
+        }
+
+        function loadProgress() {
+            const saved = localStorage.getItem('completedHabits');
+            if (saved) {
+                completedHabits = JSON.parse(saved);
+                updateProgress();
+            }
+        }
+
+        function toggleHabitSelection(habitId) {
+            const habit = habits.find(h => h.id === habitId);
+            const index = selectedHabits.findIndex(h => h.id === habitId);
+            
+            if (index > -1) {
+                selectedHabits.splice(index, 1);
+            } else {
+                selectedHabits.push(habit);
+            }
+            
+            updateSelectedHabits();
+        }
+
+        function updateSelectedHabits() {
+            const container = document.getElementById('selectedHabits');
+            
+            if (selectedHabits.length === 0) {
+                container.innerHTML = '<span style="color: #9CA3AF;">No habits selected yet. Click on habits above to add them!</span>';
+            } else {
+                container.innerHTML = selectedHabits.map(habit => `
+                    <div class="selected-habit-chip">
+                        <span>${habit.icon}</span>
+                        <span>${habit.title}</span>
+                        <span class="remove-chip" onclick="removeFromSelection(${habit.id})">×</span>
+                    </div>
+                `).join('');
+            }
+            
+            updateTotalTime();
+        }
+
+        function removeFromSelection(habitId) {
+            selectedHabits = selectedHabits.filter(h => h.id !== habitId);
+            updateSelectedHabits();
+        }
+
+        function updateTotalTime() {
+            const totalMinutes = selectedHabits.reduce((sum, habit) => sum + habit.time, 0);
+            document.getElementById('totalTime').textContent = `Total Time: ${totalMinutes} minutes`;
+        }
+
+        function downloadRoutine() {
+            if (selectedHabits.length === 0) {
+                alert('Please select at least one habit to download your routine!');
+                return;
+            }
+
+            let routineText = "MY PERSONALIZED MORNING ROUTINE\n";
+            routineText += "================================\n\n";
+            
+            let currentTime = 0;
+            selectedHabits.forEach((habit, index) => {
+                routineText += `${index + 1}. ${habit.title}\n`;
+                routineText += `   Time: ${habit.time} minutes\n`;
+                routineText += `   ${habit.description}\n\n`;
+                currentTime += habit.time;
+            });
+            
+            routineText += `\nTotal Time: ${currentTime} minutes\n`;
+            routineText += "\nTips for Success:\n";
+            routineText += "- Start with 2-3 habits and gradually add more\n";
+            routineText += "- Be consistent for at least 21 days\n";
+            routineText += "- Track your progress daily\n";
+            routineText += "- Adjust timing based on your schedule\n";
+
+            const blob = new Blob([routineText], { type: 'text/plain' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'my-morning-routine.txt';
+            a.click();
+            window.URL.revokeObjectURL(url);
+        }
+
+        function showImplementation(habitId) {
+            const habit = habits.find(h => h.id === habitId);
+            const modal = document.getElementById('modal');
+            const modalBody = document.getElementById('modalBody');
+
+            modalBody.innerHTML = `
+                <h2 class="modal-title">${habit.icon} ${habit.title}</h2>
+                <p style="color: #6B7280; margin-bottom: 25px;">Step-by-step guide to implement this habit</p>
+                
+                <div class="implementation-steps">
+                    ${habit.implementation.map(step => `
+                        <div class="step-item">${step}</div>
+                    `).join('')}
+                </div>
+
+                <div style="background: #F0F9FF; padding: 20px; border-radius: 10px; margin-top: 25px;">
+                    <h3 style="color: #0369A1; margin-bottom: 10px;">🎯 Pro Implementation Tips:</h3>
+                    <ul style="list-style-position: inside; color: #0C4A6E;">
+                        <li>Start small and build gradually</li>
+                        <li>Stack this habit with existing ones</li>
+                        <li>Track your progress for 21 days</li>
+                        <li>Find an accountability partner</li>
+                        <li>Celebrate small wins</li>
+                    </ul>
+                </div>
+
+                <div style="text-align: center; margin-top: 30px;">
+                    <button class="action-btn btn-complete" style="padding: 12px 30px;" onclick="closeModal()">
+                        Got It! Let's Do This 💪
+                    </button>
+                </div>
+            `;
+
+            modal.style.display = 'block';
+        }
+
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+        }
+
+        function closeModalOnBackground(event) {
+            if (event.target.className === 'modal') {
+                closeModal();
+            }
+        }
+
+        function getNewQuote() {
+            const randomQuote = motivationalQuotes[Math.floor(Math.random() * motivationalQuotes.length)];
+            document.getElementById('quoteText').textContent = `"${randomQuote.text}"`;
+            document.getElementById('quoteAuthor').textContent = `- ${randomQuote.author}`;
+        }
+
+        function showCelebration() {
+            const celebration = document.createElement('div');
+            celebration.style.cssText = `
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                color: white;
+                padding: 30px 50px;
+                border-radius: 20px;
+                font-size: 1.5rem;
+                font-weight: bold;
+                z-index: 3000;
+                animation: scaleIn 0.5s ease;
+                box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            `;
+            celebration.textContent = '🎉 Great Job! Keep Going!';
+            document.body.appendChild(celebration);
+
+            setTimeout(() => {
+                celebration.style.animation = 'fadeOut 0.5s ease';
+                setTimeout(() => celebration.remove(), 500);
+            }, 2000);
+        }
+
+        // Initialize on load
+        init();
+    </script>
+</body>
+</html>

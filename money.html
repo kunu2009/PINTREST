@@ -1,0 +1,1623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20 Money-Saving Tips - Start Saving Today!</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #10B981;
+            --secondary: #3B82F6;
+            --accent: #F59E0B;
+            --danger: #EF4444;
+            --success: #22C55E;
+            --dark: #1F2937;
+            --light: #F9FAFB;
+            --white: #FFFFFF;
+            --gradient1: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --gradient2: linear-gradient(135deg, #10B981 0%, #059669 100%);
+            --gradient3: linear-gradient(135deg, #3B82F6 0%, #1D4ED8 100%);
+            --money: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%);
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: var(--money);
+            min-height: 100vh;
+            line-height: 1.6;
+            color: var(--dark);
+        }
+
+        /* Header Section */
+        .hero-section {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(255, 255, 255, 0.95) 100%);
+            padding: 60px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .hero-section::before {
+            content: "💰";
+            position: absolute;
+            font-size: 200px;
+            opacity: 0.05;
+            top: -50px;
+            left: -50px;
+            animation: float 8s ease-in-out infinite;
+        }
+
+        .hero-section::after {
+            content: "💵";
+            position: absolute;
+            font-size: 150px;
+            opacity: 0.05;
+            bottom: -30px;
+            right: -30px;
+            animation: float 8s ease-in-out infinite reverse;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(10deg); }
+        }
+
+        h1 {
+            font-size: 3rem;
+            background: var(--gradient2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 15px;
+            animation: slideInDown 0.8s ease;
+        }
+
+        .subtitle {
+            font-size: 1.3rem;
+            color: var(--dark);
+            opacity: 0.8;
+            margin-bottom: 30px;
+            animation: slideInUp 0.8s ease;
+        }
+
+        /* Savings Calculator */
+        .savings-calculator {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 30px;
+            margin: 30px auto;
+            max-width: 800px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            animation: fadeIn 1s ease;
+        }
+
+        .calculator-title {
+            font-size: 1.8rem;
+            color: var(--dark);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .calculator-inputs {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+
+        .input-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .input-label {
+            color: var(--dark);
+            font-weight: 600;
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+        }
+
+        .input-field {
+            padding: 12px;
+            border: 2px solid #E5E7EB;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .input-field:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+        }
+
+        .calculate-btn {
+            width: 100%;
+            padding: 15px;
+            background: var(--gradient2);
+            color: var(--white);
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .calculate-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(16, 185, 129, 0.3);
+        }
+
+        .savings-result {
+            background: linear-gradient(135deg, #D4EDDA 0%, #C3E9D0 100%);
+            padding: 25px;
+            border-radius: 15px;
+            margin-top: 20px;
+            text-align: center;
+            display: none;
+        }
+
+        .savings-result.show {
+            display: block;
+            animation: slideInUp 0.5s ease;
+        }
+
+        .result-amount {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--success);
+            margin-bottom: 10px;
+        }
+
+        .result-text {
+            color: var(--dark);
+            font-size: 1.1rem;
+        }
+
+        /* Stats Section */
+        .stats-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin: 30px 0;
+            animation: fadeIn 1s ease;
+        }
+
+        .stat-card {
+            background: var(--white);
+            padding: 25px 35px;
+            border-radius: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        .stat-icon {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            background: var(--gradient2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .stat-label {
+            color: var(--dark);
+            opacity: 0.7;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Filter Section */
+        .filter-container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .filter-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+
+        .filter-btn {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 25px;
+            background: var(--white);
+            color: var(--dark);
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .filter-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+        }
+
+        .filter-btn.active {
+            background: var(--gradient2);
+            color: var(--white);
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Tips Grid */
+        .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .tip-card {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            animation: fadeInUp 0.5s ease;
+            cursor: pointer;
+        }
+
+        .tip-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--gradient2);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .tip-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .tip-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .tip-card.implemented {
+            background: linear-gradient(135deg, #f0fff4 0%, #e6ffed 100%);
+            border: 2px solid var(--success);
+        }
+
+        .tip-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .tip-icon {
+            font-size: 2.5rem;
+            line-height: 1;
+        }
+
+        .tip-number {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            background: var(--gradient2);
+            color: var(--white);
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .tip-title {
+            font-size: 1.4rem;
+            color: var(--dark);
+            margin-bottom: 5px;
+            flex: 1;
+        }
+
+        .tip-category {
+            display: inline-block;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .category-daily {
+            background: #E0F2FE;
+            color: #0369A1;
+        }
+
+        .category-shopping {
+            background: #FEE2E2;
+            color: #DC2626;
+        }
+
+        .category-bills {
+            background: #F3E8FF;
+            color: #7C3AED;
+        }
+
+        .category-food {
+            background: #FEF3C7;
+            color: #D97706;
+        }
+
+        .category-lifestyle {
+            background: #D1FAE5;
+            color: #065F46;
+        }
+
+        .category-longterm {
+            background: #E5E7EB;
+            color: #374151;
+        }
+
+        .potential-savings {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 15px;
+            padding: 10px;
+            background: linear-gradient(135deg, #F0FDF4 0%, #DCFCE7 100%);
+            border-radius: 10px;
+        }
+
+        .savings-amount {
+            font-weight: bold;
+            color: var(--success);
+            font-size: 1.1rem;
+        }
+
+        .tip-description {
+            color: var(--dark);
+            opacity: 0.8;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .tip-details {
+            background: #F8F9FA;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .detail-title {
+            font-weight: bold;
+            color: var(--dark);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .detail-list {
+            list-style: none;
+        }
+
+        .detail-list li {
+            padding: 5px 0;
+            padding-left: 25px;
+            position: relative;
+            color: var(--dark);
+            opacity: 0.8;
+        }
+
+        .detail-list li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        .quick-tip {
+            background: #FFF9E6;
+            padding: 15px;
+            border-radius: 10px;
+            border-left: 4px solid var(--accent);
+            margin-bottom: 20px;
+        }
+
+        .quick-tip-content {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .quick-tip-icon {
+            font-size: 1.2rem;
+        }
+
+        .tip-actions {
+            display: flex;
+            gap: 10px;
+            padding-top: 20px;
+            border-top: 1px solid #E5E7EB;
+        }
+
+        .action-btn {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            border-radius: 10px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+        }
+
+        .btn-implement {
+            background: var(--gradient2);
+            color: var(--white);
+        }
+
+        .btn-implement:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(16, 185, 129, 0.3);
+        }
+
+        .btn-implement.implemented {
+            background: var(--success);
+        }
+
+        .btn-calculate {
+            background: #F3F4F6;
+            color: var(--dark);
+        }
+
+        .btn-calculate:hover {
+            background: #E5E7EB;
+        }
+
+        /* Savings Tracker */
+        .savings-tracker {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 40px;
+            margin: 50px 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .tracker-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .tracker-title {
+            font-size: 2rem;
+            color: var(--dark);
+            margin-bottom: 10px;
+        }
+
+        .tracker-subtitle {
+            color: var(--dark);
+            opacity: 0.7;
+        }
+
+        .implemented-tips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            min-height: 60px;
+            padding: 20px;
+            background: #F8F9FA;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            align-items: center;
+        }
+
+        .implemented-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 15px;
+            background: var(--gradient2);
+            color: var(--white);
+            border-radius: 20px;
+            font-size: 0.9rem;
+            animation: scaleIn 0.3s ease;
+        }
+
+        .remove-chip {
+            cursor: pointer;
+            font-weight: bold;
+            margin-left: 5px;
+        }
+
+        .total-savings {
+            text-align: center;
+            font-size: 1.2rem;
+            color: var(--dark);
+            margin: 20px 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #D4EDDA 0%, #C3E9D0 100%);
+            border-radius: 15px;
+        }
+
+        .savings-value {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--success);
+        }
+
+        .export-btn {
+            display: block;
+            margin: 30px auto;
+            padding: 15px 40px;
+            background: var(--gradient3);
+            color: var(--white);
+            border: none;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+
+        .export-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+        }
+
+        /* Progress Section */
+        .progress-section {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 30px;
+            margin: 30px 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .progress-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .progress-title {
+            font-size: 1.8rem;
+            color: var(--dark);
+            margin-bottom: 10px;
+        }
+
+        .progress-bar-container {
+            background: #E5E7EB;
+            height: 30px;
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: var(--gradient2);
+            border-radius: 15px;
+            transition: width 0.5s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-weight: bold;
+        }
+
+        .milestones {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 30px;
+        }
+
+        .milestone {
+            text-align: center;
+            padding: 15px;
+            background: #F8F9FA;
+            border-radius: 15px;
+            flex: 1;
+            margin: 0 10px;
+        }
+
+        .milestone.achieved {
+            background: linear-gradient(135deg, #D4EDDA 0%, #C3E9D0 100%);
+        }
+
+        .milestone-icon {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .milestone-title {
+            font-weight: bold;
+            color: var(--dark);
+            margin-bottom: 5px;
+        }
+
+        .milestone-description {
+            color: var(--dark);
+            opacity: 0.7;
+            font-size: 0.9rem;
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.7);
+            z-index: 2000;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .modal-content {
+            position: relative;
+            background: var(--white);
+            margin: 50px auto;
+            padding: 40px;
+            width: 90%;
+            max-width: 600px;
+            border-radius: 20px;
+            max-height: 80vh;
+            overflow-y: auto;
+            animation: slideUp 0.3s ease;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 20px;
+            right: 25px;
+            font-size: 2rem;
+            cursor: pointer;
+            color: var(--dark);
+            opacity: 0.5;
+            transition: opacity 0.3s ease;
+        }
+
+        .close-modal:hover {
+            opacity: 1;
+        }
+
+        .modal-title {
+            font-size: 1.8rem;
+            color: var(--dark);
+            margin-bottom: 20px;
+        }
+
+        /* Floating Action Button */
+        .fab-container {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1000;
+        }
+
+        .fab {
+            width: 60px;
+            height: 60px;
+            background: var(--gradient2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.5rem;
+            cursor: pointer;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+        }
+
+        .fab:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes scaleIn {
+            from {
+                transform: scale(0);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .tips-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .modal-content {
+                margin: 20px;
+                padding: 25px;
+            }
+
+            .stats-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .milestones {
+                flex-direction: column;
+            }
+
+            .milestone {
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero-section">
+        <h1>💰 20 Money-Saving Tips</h1>
+        <p class="subtitle">Smart strategies to keep more money in your pocket</p>
+        
+        <div class="stats-container">
+            <div class="stat-card">
+                <div class="stat-icon">💵</div>
+                <div class="stat-number">$500+</div>
+                <div class="stat-label">Monthly Savings</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">📊</div>
+                <div class="stat-number">20</div>
+                <div class="stat-label">Proven Tips</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">⏱️</div>
+                <div class="stat-number">5 min</div>
+                <div class="stat-label">To Implement</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="savings-calculator">
+            <h2 class="calculator-title">💸 Quick Savings Calculator</h2>
+            <div class="calculator-inputs">
+                <div class="input-group">
+                    <label class="input-label">Monthly Income ($)</label>
+                    <input type="number" class="input-field" id="monthlyIncome" placeholder="3000">
+                </div>
+                <div class="input-group">
+                    <label class="input-label">Savings Goal (%)</label>
+                    <input type="number" class="input-field" id="savingsGoal" placeholder="20" min="1" max="100">
+                </div>
+                <div class="input-group">
+                    <label class="input-label">Time Period (months)</label>
+                    <input type="number" class="input-field" id="timePeriod" placeholder="12" min="1">
+                </div>
+            </div>
+            <button class="calculate-btn" onclick="calculateSavings()">Calculate My Savings Potential</button>
+            <div class="savings-result" id="savingsResult">
+                <div class="result-amount" id="resultAmount">$0</div>
+                <div class="result-text" id="resultText">You could save this much!</div>
+            </div>
+        </div>
+
+        <div class="filter-container">
+            <div class="filter-buttons">
+                <button class="filter-btn active" onclick="filterTips('all')">
+                    <span>📋</span> All Tips
+                </button>
+                <button class="filter-btn" onclick="filterTips('daily')">
+                    <span>☀️</span> Daily Habits
+                </button>
+                <button class="filter-btn" onclick="filterTips('shopping')">
+                    <span>🛒</span> Shopping
+                </button>
+                <button class="filter-btn" onclick="filterTips('bills')">
+                    <span>📱</span> Bills & Utilities
+                </button>
+                <button class="filter-btn" onclick="filterTips('food')">
+                    <span>🍕</span> Food & Dining
+                </button>
+                <button class="filter-btn" onclick="filterTips('lifestyle')">
+                    <span>🎯</span> Lifestyle
+                </button>
+                <button class="filter-btn" onclick="filterTips('longterm')">
+                    <span>📈</span> Long-term
+                </button>
+            </div>
+        </div>
+
+        <div class="tips-grid" id="tipsGrid"></div>
+
+        <div class="progress-section">
+            <div class="progress-header">
+                <h2 class="progress-title">Your Savings Journey</h2>
+                <p style="color: #6B7280; margin-bottom: 20px;">Track your progress as you implement money-saving tips</p>
+            </div>
+            <div class="progress-bar-container">
+                <div class="progress-bar" id="progressBar">0%</div>
+            </div>
+            <div class="milestones">
+                <div class="milestone" id="milestone1">
+                    <div class="milestone-icon">🌱</div>
+                    <div class="milestone-title">Beginner Saver</div>
+                    <div class="milestone-description">5 tips implemented</div>
+                </div>
+                <div class="milestone" id="milestone2">
+                    <div class="milestone-icon">🌿</div>
+                    <div class="milestone-title">Smart Saver</div>
+                    <div class="milestone-description">10 tips implemented</div>
+                </div>
+                <div class="milestone" id="milestone3">
+                    <div class="milestone-icon">🌳</div>
+                    <div class="milestone-title">Master Saver</div>
+                    <div class="milestone-description">15+ tips implemented</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="savings-tracker">
+            <div class="tracker-header">
+                <h2 class="tracker-title">💰 My Savings Plan</h2>
+                <p class="tracker-subtitle">Select tips you want to implement and track your potential savings</p>
+            </div>
+            <div class="implemented-tips" id="implementedTips">
+                <span style="color: #9CA3AF;">No tips selected yet. Click on tips above to add them!</span>
+            </div>
+            <div class="total-savings">
+                <div>Your Potential Monthly Savings:</div>
+                <div class="savings-value" id="totalSavings">$0</div>
+            </div>
+            <button class="export-btn" onclick="exportSavingsPlan()">
+                📄 Export My Savings Plan
+            </button>
+        </div>
+    </div>
+
+    <div class="fab-container">
+        <div class="fab" onclick="scrollToTop()">↑</div>
+    </div>
+
+    <div id="modal" class="modal" onclick="closeModalOnBackground(event)">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <script>
+        const savingsTips = [
+            {
+                id: 1,
+                title: "Track Every Expense",
+                icon: "📊",
+                category: "daily",
+                savings: "$50-100",
+                savingsValue: 75,
+                description: "Use apps or a simple notebook to record every purchase. Awareness alone can reduce spending by 10-20%.",
+                details: [
+                    "Use apps like Mint or YNAB",
+                    "Review expenses weekly",
+                    "Categorize spending patterns",
+                    "Set alerts for overspending"
+                ],
+                quickTip: "Take a photo of receipts immediately to track cash purchases easily."
+            },
+            {
+                id: 2,
+                title: "Meal Prep Sundays",
+                icon: "🍱",
+                category: "food",
+                savings: "$200-300",
+                savingsValue: 250,
+                description: "Prepare meals for the week to avoid expensive takeout and reduce food waste.",
+                details: [
+                    "Plan 5 meals at once",
+                    "Buy ingredients in bulk",
+                    "Use same ingredients multiple ways",
+                    "Freeze portions for variety"
+                ],
+                quickTip: "Start with just preparing lunches if doing all meals feels overwhelming."
+            },
+            {
+                id: 3,
+                title: "Cancel Unused Subscriptions",
+                icon: "❌",
+                category: "bills",
+                savings: "$30-100",
+                savingsValue: 65,
+                description: "Review and cancel streaming services, gym memberships, and apps you don't actively use.",
+                details: [
+                    "Audit all monthly subscriptions",
+                    "Share family plans when possible",
+                    "Use free alternatives",
+                    "Set reminders before trials end"
+                ],
+                quickTip: "Use apps like Truebill to find and cancel forgotten subscriptions automatically."
+            },
+            {
+                id: 4,
+                title: "Use the 24-Hour Rule",
+                icon: "⏰",
+                category: "shopping",
+                savings: "$100-200",
+                savingsValue: 150,
+                description: "Wait 24 hours before making non-essential purchases to avoid impulse buying.",
+                details: [
+                    "Add items to wishlist instead",
+                    "Often desire fades overnight",
+                    "Compare prices during wait time",
+                    "Ask 'Do I need or want this?'"
+                ],
+                quickTip: "For online shopping, leave items in cart and wait for discount codes via email."
+            },
+            {
+                id: 5,
+                title: "Negotiate Bills Annually",
+                icon: "📞",
+                category: "bills",
+                savings: "$50-150",
+                savingsValue: 100,
+                description: "Call providers for internet, insurance, and phone to negotiate better rates or switch providers.",
+                details: [
+                    "Research competitor prices first",
+                    "Ask for retention department",
+                    "Be prepared to switch",
+                    "Bundle services for discounts"
+                ],
+                quickTip: "Best time to call is end of quarter when companies want to meet sales goals."
+            },
+            {
+                id: 6,
+                title: "DIY Coffee & Drinks",
+                icon: "☕",
+                category: "food",
+                savings: "$100-150",
+                savingsValue: 125,
+                description: "Make coffee and beverages at home instead of buying from cafes daily.",
+                details: [
+                    "Invest in good coffee maker",
+                    "Buy quality beans in bulk",
+                    "Learn your favorite recipes",
+                    "Treat cafe visits as special occasions"
+                ],
+                quickTip: "A $200 espresso machine pays for itself in 2 months vs daily coffee shop visits."
+            },
+            {
+                id: 7,
+                title: "Use Cashback Apps",
+                icon: "📱",
+                category: "shopping",
+                savings: "$20-50",
+                savingsValue: 35,
+                description: "Stack cashback apps like Rakuten, Honey, and credit card rewards on purchases.",
+                details: [
+                    "Install browser extensions",
+                    "Check multiple apps before buying",
+                    "Use cashback credit cards",
+                    "Cash out regularly"
+                ],
+                quickTip: "Set up automatic cashback reminders before online shopping."
+            },
+            {
+                id: 8,
+                title: "Energy-Efficient Habits",
+                icon: "💡",
+                category: "bills",
+                savings: "$30-80",
+                savingsValue: 55,
+                description: "Simple changes like LED bulbs, unplugging devices, and adjusting thermostat save significantly.",
+                details: [
+                    "Replace bulbs with LEDs",
+                    "Use smart power strips",
+                    "Adjust thermostat 2-3 degrees",
+                    "Run appliances during off-peak hours"
+                ],
+                quickTip: "A smart thermostat can save 10-23% on heating and cooling bills."
+            },
+            {
+                id: 9,
+                title: "Generic Brand Shopping",
+                icon: "🏷️",
+                category: "shopping",
+                savings: "$50-100",
+                savingsValue: 75,
+                description: "Buy store brands for groceries and household items - often identical products at 20-30% less.",
+                details: [
+                    "Compare ingredients lists",
+                    "Start with non-food items",
+                    "Try store brand gradually",
+                    "Keep name brands for favorites only"
+                ],
+                quickTip: "Many generic products are made by name-brand manufacturers in the same facilities."
+            },
+            {
+                id: 10,
+                title: "Automate Savings",
+                icon: "🤖",
+                category: "longterm",
+                savings: "$100-500",
+                savingsValue: 300,
+                description: "Set up automatic transfers to savings immediately after payday - pay yourself first.",
+                details: [
+                    "Start with 5-10% of income",
+                    "Increase gradually",
+                    "Use separate savings account",
+                    "Make it hard to access"
+                ],
+                quickTip: "Round-up apps like Acorns save spare change automatically without you noticing."
+            },
+            {
+                id: 11,
+                title: "Batch Errands",
+                icon: "🚗",
+                category: "daily",
+                savings: "$30-60",
+                savingsValue: 45,
+                description: "Combine errands into one trip to save gas, time, and reduce impulse purchases.",
+                details: [
+                    "Plan route efficiently",
+                    "Keep running list of needs",
+                    "Shop with list only",
+                    "Avoid multiple store trips"
+                ],
+                quickTip: "Do errands right after work to avoid special trips on weekends."
+            },
+            {
+                id: 12,
+                title: "Free Entertainment",
+                icon: "🎭",
+                category: "lifestyle",
+                savings: "$50-150",
+                savingsValue: 100,
+                description: "Utilize free local events, libraries, parks, and online resources for entertainment.",
+                details: [
+                    "Check local event calendars",
+                    "Use library for books/movies",
+                    "Explore free museum days",
+                    "Host potluck gatherings"
+                ],
+                quickTip: "Many cities offer 'First Friday' events with free admission to attractions."
+            },
+            {
+                id: 13,
+                title: "Repair Before Replace",
+                icon: "🔧",
+                category: "lifestyle",
+                savings: "$50-200",
+                savingsValue: 125,
+                description: "Learn basic repairs for clothes, electronics, and household items via YouTube tutorials.",
+                details: [
+                    "YouTube has tutorials for everything",
+                    "Buy basic tool kit",
+                    "Learn sewing basics",
+                    "Find local repair cafes"
+                ],
+                quickTip: "A $20 sewing kit can save hundreds on clothing repairs and alterations."
+            },
+            {
+                id: 14,
+                title: "Bulk Buying Strategy",
+                icon: "📦",
+                category: "shopping",
+                savings: "$40-80",
+                savingsValue: 60,
+                description: "Buy non-perishables in bulk but only for items you definitely use regularly.",
+                details: [
+                    "Calculate price per unit",
+                    "Share bulk buys with friends",
+                    "Store properly to prevent waste",
+                    "Track what you actually use"
+                ],
+                quickTip: "Not everything is cheaper in bulk - always check unit prices."
+            },
+            {
+                id: 15,
+                title: "No-Spend Challenges",
+                icon: "🚫",
+                category: "daily",
+                savings: "$100-300",
+                savingsValue: 200,
+                description: "Dedicate one week per month to spending only on absolute essentials.",
+                details: [
+                    "Plan meals from pantry",
+                    "Find free activities",
+                    "Avoid shopping triggers",
+                    "Track money saved"
+                ],
+                quickTip: "Start with no-spend weekends before attempting full weeks."
+            },
+            {
+                id: 16,
+                title: "Coupon & Promo Codes",
+                icon: "🎟️",
+                category: "shopping",
+                savings: "$30-70",
+                savingsValue: 50,
+                description: "Never buy online without searching for promo codes - save 10-30% regularly.",
+                details: [
+                    "Use Honey browser extension",
+                    "Sign up for store emails",
+                    "Stack coupons with sales",
+                    "Check RetailMeNot before buying"
+                ],
+                quickTip: "Many stores offer 10-15% off for email signup - use a separate email for this."
+            },
+            {
+                id: 17,
+                title: "Sell Unused Items",
+                icon: "💰",
+                category: "lifestyle",
+                savings: "$50-200",
+                savingsValue: 125,
+                description: "Regularly declutter and sell items on Facebook Marketplace, eBay, or Poshmark.",
+                details: [
+                    "Seasonal clothing clean-outs",
+                    "Sell electronics before obsolete",
+                    "Bundle similar items",
+                    "Price competitively"
+                ],
+                quickTip: "Take photos in natural light and write detailed descriptions for faster sales."
+            },
+            {
+                id: 18,
+                title: "Water Over Everything",
+                icon: "💧",
+                category: "food",
+                savings: "$30-60",
+                savingsValue: 45,
+                description: "Choose water at restaurants and avoid buying bottled drinks - saves money and calories.",
+                details: [
+                    "Carry reusable water bottle",
+                    "Add lemon for flavor",
+                    "Saves $3-5 per meal out",
+                    "Better for health too"
+                ],
+                quickTip: "If you drink 2 sodas daily, switching to water saves $150+ monthly."
+            },
+            {
+                id: 19,
+                title: "Budget Birthday/Holiday",
+                icon: "🎁",
+                category: "longterm",
+                savings: "$50-100",
+                savingsValue: 75,
+                description: "Set annual gift budget and shop sales year-round instead of last-minute expensive purchases.",
+                details: [
+                    "Keep gift closet",
+                    "Buy during major sales",
+                    "DIY meaningful gifts",
+                    "Set spending limits with family"
+                ],
+                quickTip: "Buy holiday gifts during summer sales for 50-70% savings."
+            },
+            {
+                id: 20,
+                title: "Review Insurance Annually",
+                icon: "🛡️",
+                category: "longterm",
+                savings: "$100-300",
+                savingsValue: 200,
+                description: "Shop around for car, home, and health insurance annually - loyalty doesn't pay.",
+                details: [
+                    "Bundle policies for discounts",
+                    "Increase deductibles if stable",
+                    "Remove unnecessary coverage",
+                    "Check for new discounts"
+                ],
+                quickTip: "Set calendar reminder for 30 days before renewal to shop around."
+            }
+        ];
+
+        let implementedTips = [];
+        let currentFilter = 'all';
+
+        function init() {
+            displayTips(savingsTips);
+            loadProgress();
+        }
+
+        function displayTips(tipsToShow) {
+            const grid = document.getElementById('tipsGrid');
+            grid.innerHTML = '';
+
+            tipsToShow.forEach(tip => {
+                const card = document.createElement('div');
+                card.className = 'tip-card';
+                if (implementedTips.includes(tip.id)) {
+                    card.classList.add('implemented');
+                }
+                
+                card.innerHTML = `
+                    <div class="tip-number">${tip.id}</div>
+                    <div class="tip-header">
+                        <div class="tip-icon">${tip.icon}</div>
+                        <div>
+                            <h3 class="tip-title">${tip.title}</h3>
+                            <span class="tip-category category-${tip.category}">
+                                ${getCategoryName(tip.category)}
+                            </span>
+                        </div>
+                    </div>
+                    <div class="potential-savings">
+                        <span>💵 Potential Savings:</span>
+                        <span class="savings-amount">${tip.savings}/month</span>
+                    </div>
+                    <p class="tip-description">${tip.description}</p>
+                    <div class="tip-details">
+                        <div class="detail-title">
+                            <span>📌</span>
+                            <span>How to implement:</span>
+                        </div>
+                        <ul class="detail-list">
+                            ${tip.details.map(detail => `<li>${detail}</li>`).join('')}
+                        </ul>
+                    </div>
+                    <div class="quick-tip">
+                        <div class="quick-tip-content">
+                            <span class="quick-tip-icon">💡</span>
+                            <p>${tip.quickTip}</p>
+                        </div>
+                    </div>
+                    <div class="tip-actions">
+                        <button class="action-btn btn-implement ${implementedTips.includes(tip.id) ? 'implemented' : ''}" 
+                                onclick="toggleImplemented(${tip.id})">
+                            ${implementedTips.includes(tip.id) ? '✅ Implemented' : '⭕ Mark as Done'}
+                        </button>
+                        <button class="action-btn btn-calculate" onclick="showCalculator(${tip.id})">
+                            🧮 Calculate Impact
+                        </button>
+                    </div>
+                `;
+
+                grid.appendChild(card);
+            });
+        }
+
+        function getCategoryName(category) {
+            const names = {
+                daily: 'Daily Habits',
+                shopping: 'Shopping',
+                bills: 'Bills & Utilities',
+                food: 'Food & Dining',
+                lifestyle: 'Lifestyle',
+                longterm: 'Long-term'
+            };
+            return names[category] || category;
+        }
+
+        function filterTips(category) {
+            currentFilter = category;
+            
+            // Update active button
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+
+            if (category === 'all') {
+                displayTips(savingsTips);
+            } else {
+                const filtered = savingsTips.filter(t => t.category === category);
+                displayTips(filtered);
+            }
+        }
+
+        function toggleImplemented(tipId) {
+            const index = implementedTips.indexOf(tipId);
+            if (index > -1) {
+                implementedTips.splice(index, 1);
+            } else {
+                implementedTips.push(tipId);
+                showCelebration();
+            }
+            
+            updateProgress();
+            updateTracker();
+            displayTips(currentFilter === 'all' ? savingsTips : savingsTips.filter(t => t.category === currentFilter));
+        }
+
+        function updateProgress() {
+            const percentage = Math.round((implementedTips.length / savingsTips.length) * 100);
+            const progressBar = document.getElementById('progressBar');
+            progressBar.style.width = `${percentage}%`;
+            progressBar.textContent = `${percentage}%`;
+            
+            // Update milestones
+            if (implementedTips.length >= 5) {
+                document.getElementById('milestone1').classList.add('achieved');
+            }
+            if (implementedTips.length >= 10) {
+                document.getElementById('milestone2').classList.add('achieved');
+            }
+            if (implementedTips.length >= 15) {
+                document.getElementById('milestone3').classList.add('achieved');
+            }
+            
+            // Save progress
+            localStorage.setItem('implementedTips', JSON.stringify(implementedTips));
+        }
+
+        function updateTracker() {
+            const container = document.getElementById('implementedTips');
+            const implementedTipsList = savingsTips.filter(t => implementedTips.includes(t.id));
+            
+            if (implementedTipsList.length === 0) {
+                container.innerHTML = '<span style="color: #9CA3AF;">No tips selected yet. Click on tips above to add them!</span>';
+            } else {
+                container.innerHTML = implementedTipsList.map(tip => `
+                    <div class="implemented-chip">
+                        <span>${tip.icon}</span>
+                        <span>${tip.title}</span>
+                        <span class="remove-chip" onclick="removeFromImplemented(${tip.id})">×</span>
+                    </div>
+                `).join('');
+            }
+            
+            updateTotalSavings();
+        }
+
+        function removeFromImplemented(tipId) {
+            implementedTips = implementedTips.filter(id => id !== tipId);
+            updateProgress();
+            updateTracker();
+            displayTips(currentFilter === 'all' ? savingsTips : savingsTips.filter(t => t.category === currentFilter));
+        }
+
+        function updateTotalSavings() {
+            const total = savingsTips
+                .filter(t => implementedTips.includes(t.id))
+                .reduce((sum, tip) => sum + tip.savingsValue, 0);
+            
+            document.getElementById('totalSavings').textContent = `$${total}`;
+        }
+
+        function loadProgress() {
+            const saved = localStorage.getItem('implementedTips');
+            if (saved) {
+                implementedTips = JSON.parse(saved);
+                updateProgress();
+                updateTracker();
+            }
+        }
+
+        function calculateSavings() {
+            const income = parseFloat(document.getElementById('monthlyIncome').value) || 3000;
+            const goal = parseFloat(document.getElementById('savingsGoal').value) || 20;
+            const months = parseFloat(document.getElementById('timePeriod').value) || 12;
+            
+            const monthlySavings = income * (goal / 100);
+            const totalSavings = monthlySavings * months;
+            
+            const result = document.getElementById('savingsResult');
+            document.getElementById('resultAmount').textContent = `$${totalSavings.toFixed(0)}`;
+            document.getElementById('resultText').textContent = `You could save $${monthlySavings.toFixed(0)}/month for ${months} months!`;
+            
+            result.classList.add('show');
+        }
+
+        function showCalculator(tipId) {
+            const tip = savingsTips.find(t => t.id === tipId);
+            const modal = document.getElementById('modal');
+            const modalBody = document.getElementById('modalBody');
+
+            modalBody.innerHTML = `
+                <h2 class="modal-title">${tip.icon} ${tip.title} - Savings Calculator</h2>
+                
+                <div style="margin-bottom: 25px;">
+                    <p style="color: #6B7280;">Calculate your potential annual savings with this tip:</p>
+                </div>
+
+                <div style="background: #F0FDF4; padding: 20px; border-radius: 15px; margin-bottom: 20px;">
+                    <div style="font-size: 1.1rem; color: #065F46; margin-bottom: 10px;">
+                        <strong>Expected Monthly Savings:</strong> ${tip.savings}
+                    </div>
+                    <div style="font-size: 2rem; font-weight: bold; color: #22C55E;">
+                        Annual Savings: $${tip.savingsValue * 12}
+                    </div>
+                </div>
+
+                <div style="background: #F8F9FA; padding: 20px; border-radius: 15px;">
+                    <h3 style="margin-bottom: 15px;">What you could do with $${tip.savingsValue * 12}:</h3>
+                    <ul style="list-style-position: inside; color: #374151;">
+                        <li>Build ${Math.floor(tip.savingsValue * 12 / 1000)} month emergency fund</li>
+                        <li>Take a weekend vacation</li>
+                        <li>Pay off credit card debt faster</li>
+                        <li>Invest for ${Math.floor(tip.savingsValue * 12 * 1.07)} next year</li>
+                    </ul>
+                </div>
+
+                <div style="text-align: center; margin-top: 30px;">
+                    <button class="action-btn btn-implement" style="padding: 12px 30px;" onclick="closeModalAndImplement(${tip.id})">
+                        Start Saving Now! 💪
+                    </button>
+                </div>
+            `;
+
+            modal.style.display = 'block';
+        }
+
+        function closeModalAndImplement(tipId) {
+            if (!implementedTips.includes(tipId)) {
+                toggleImplemented(tipId);
+            }
+            closeModal();
+        }
+
+        function exportSavingsPlan() {
+            if (implementedTips.length === 0) {
+                alert('Please select at least one tip to export your savings plan!');
+                return;
+            }
+
+            const implementedTipsList = savingsTips.filter(t => implementedTips.includes(t.id));
+            let planText = "MY PERSONAL SAVINGS PLAN\n";
+            planText += "========================\n\n";
+            
+            let totalMonthly = 0;
+            implementedTipsList.forEach((tip, index) => {
+                planText += `${index + 1}. ${tip.title}\n`;
+                planText += `   Expected Savings: ${tip.savings}/month\n`;
+                planText += `   ${tip.description}\n\n`;
+                totalMonthly += tip.savingsValue;
+            });
+            
+            planText += `\nTOTAL MONTHLY SAVINGS: $${totalMonthly}\n`;
+            planText += `ANNUAL SAVINGS: $${totalMonthly * 12}\n\n`;
+            planText += "NEXT STEPS:\n";
+            planText += "1. Set up automatic savings transfer\n";
+            planText += "2. Track expenses for one month\n";
+            planText += "3. Review and adjust plan monthly\n";
+            planText += "4. Celebrate milestones!\n";
+
+            const blob = new Blob([planText], { type: 'text/plain' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'my-savings-plan.txt';
+            a.click();
+            window.URL.revokeObjectURL(url);
+        }
+
+        function showCelebration() {
+            const celebration = document.createElement('div');
+            celebration.style.cssText = `
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background: var(--gradient2);
+                color: white;
+                padding: 30px 50px;
+                border-radius: 20px;
+                font-size: 1.5rem;
+                font-weight: bold;
+                z-index: 3000;
+                animation: scaleIn 0.5s ease;
+                box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            `;
+            celebration.textContent = '💰 Great Choice! Keep Saving!';
+            document.body.appendChild(celebration);
+
+            setTimeout(() => {
+                celebration.style.animation = 'fadeOut 0.5s ease';
+                setTimeout(() => celebration.remove(), 500);
+            }, 2000);
+        }
+
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+        }
+
+        function closeModalOnBackground(event) {
+            if (event.target.className === 'modal') {
+                closeModal();
+            }
+        }
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Initialize on load
+        init();
+    </script>
+</body>
+</html>

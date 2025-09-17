@@ -63,4 +63,14 @@
         "category": "Lifestyle",
         "date": "2025-09-17"
     }
+    ,
+    {
+        "id": 8,
+        "title": "20 Money-Saving Tips",
+        "description": "Smart strategies to keep more money in your pocket—practical tips you can start today.",
+        "url": "money.html",
+        "icon": "💰",
+        "category": "Finance",
+        "date": "2025-09-17"
+    }
 ]
